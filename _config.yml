@@ -1,7 +1,7 @@
 # Site settings
 title: Tori's MindPalace
 SEOTitle: Tori's MindPalace
-header-img: img/home-bg.jpg
+header-img: img/post-bg-os-metro.jpg
 email: niwatori@foxmail.com
 description: "机器学习与认知科学"
 keyword: "认知科学"
@@ -13,12 +13,12 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     huxpro
-zhihu_username:     huxpro
-github_username:    huxpro
-twitter_username:   huxpro
-#facebook_username:  huxpro
-#linkedin_username:  firstname-lastname-idxxxx
+weibo_username:     二和鶏
+zhihu_username:     二和鶏
+github_username:    niwatorrri
+# twitter_username:   huxpro
+# facebook_username:  huxpro
+# linkedin_username:  firstname-lastname-idxxxx
 
 
 
@@ -79,7 +79,7 @@ ga_domain: huangxuan.me
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "It is a sidebar"
-sidebar-avatar: /img/avatar-hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/avatar-tori.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
