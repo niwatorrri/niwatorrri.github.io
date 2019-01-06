@@ -13,11 +13,11 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     二和鶏
-zhihu_username:     二和鶏
+weibo_username:     niwatori
+zhihu_username:     niwatori1217
 github_username:    niwatorrri
 # twitter_username:   huxpro
-# facebook_username:  huxpro
+facebook_username:  niwatori1217
 # linkedin_username:  firstname-lastname-idxxxx
 
 
