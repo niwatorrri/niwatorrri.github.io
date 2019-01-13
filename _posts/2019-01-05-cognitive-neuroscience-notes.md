@@ -283,7 +283,7 @@ tags:
   - 盲人摸盲文也有VWFA活动，但区域更靠前一些
 - __语言障碍：失语症aphasia__
   - Lichtheim的语言模型：B为概念存储区，M为语言计划区（Broca区），A为语音词典区（Wernicke区）
-    <img src="fig-language-disorder.png" style="zoom:60%" />
+    ![Language disorders](/img/in-post/fig-language-disorder.png)
   - Broca失语：左侧额下部Broca区受损（BA44-45），只能说简单的音节或词，句子缺乏语法标记，说话费劲，可能有一定的语言理解障碍
   - Wernicke失语：左侧颞上回后部Wernicke区受损，无法理解书面和口头语言，能流利地说句子，但说出的句子没有意义，可能有命名障碍
   - 传导性失语conduction aphasia：弓状束受损，自发说话会频繁出错，能意识到自己话中的错误但无法纠正，难以复述他人的话
