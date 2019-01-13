@@ -1,0 +1,276 @@
+---
+layout: post
+title: "Notes on Computer Networks"
+subtitle: "Computer Networking: A Top-Down Approach (6th Edition)"
+author: "Tori"
+header-style: text
+tags:
+- Computer science
+---
+
+- TOC
+{:toc}
+
+## Chapter 1: Introduction
+- The network core: how is data transferred through the core?
+  - Packet switching: on-demand transmission, data sent in discrete chunks
+    - Store-and-forward: not begin output until the input is completely received
+    - Pros: better utilization of transmission capacity; simpler, more efficient and less costly to implement
+  - Circuit switching: resources needed along a path are reserved for communications, including buffers and link transmission rate, e.g. telephone networks
+    - TDM (Time Division Multiplexing): one time slot in every frame is dedicated
+    - FDM (Frequency Division Multiplexing): a frequency band is dedicated
+    - Pros: suitable for real-time services
+- Performance metrics: delay, loss and throughput
+  - Nodal processing delay: time for examining packet and determining where to direct
+  - Queueing delay: time before the packet is transmitted onto the link, a function of traffic intensity La/R, where a denotes packet arrival rate (loss occurs when > 1)
+  - Transmission delay: time for router to push a packet onto the link, a function of packet length and link rate
+  - Propagation delay: time for a bit to propagate from one router to the next, a function of only the distance between the routers
+  - Throughput: bit transmission rate between sender and receiver, limited by bottleneck
+- Hierarchy and layering
+  - Why layering? To clarify the relationship of complex system pieces, easy maintenance of changes, transparency of lower-level details to upper-level users
+  - Protocol stack: application -> transport -> network -> link -> physical
+  - Encapsulation: message -> segment -> datagram -> frame -> bit
+  - Ideas concerning hierarchy: ISP, DNS, IP addressing, routing
+
+## Chapter 2: Application Layer
+
+- Application architectures: client-server, peer-to-peer (P2P) or a hybrid of two (e.g. Skype)
+- Application processes
+  - Socket: an interface for a process to send or receive messages, provide transport layer protocol choices and a few parameters to set
+  - Identifier: IP address and port number
+  - TCP: reliable, connection-oriented, congestion control, used for HTTP, FTP, SMTP, etc.
+  - UDP: unreliable but fast, suitable for loss-tolerant and time-sensitive applications, e.g. real-time audio/video, interactive games
+- Application layer protocols
+  - HTTP: hypertext transfer protocol, use TCP, port 80
+    - Stateless, i.e. maintain no information about past client requests, unless combined with cookies, a file kept on user’s host and a database maintained by website
+    - Non-persistent HTTP (slow, 2RTTs per object), persistent HTTP (default, connection still open after server responds, 2RTTs for all objects)
+    - Web cache: usually installed by ISP, reduce response time and traffic on access link
+  - FTP: file transfer protocol, use TCP, port 21
+    - Control connection (persistent) over port 21, data connection (non-persistent) over port 20, “out-of-band” control
+  - SMTP: simple mail transfer protocol, use TCP, port 25, message delivery
+    - User agent A -> SMTP server A <—TCP—> SMTP server B -> User agent B, no intermediate mail servers 
+    - Comparison with HTTP: pull/push, whether messages must be in ASCII, different objects in multiple/single message(s)
+  - POP3: post office protocol v3, use TCP, port 110, message retrieval, authorization and download, stateless
+  - IMAP: Internet mail access protocol, use TCP, port 143, message retrieval, more complex than POP3, support organizing messages in folders, stateful
+  - DNS: domain name system, use UDP, port 53, mapping hostname to IP address(es)
+    - Distributed hierarchical database: root DNS -> top-level domain DNS (.com, .org, …) -> authoritative DNS (maintained by organization), local DNS (maintained by ISP)
+    - Iterative query vs. recursive query -> DNS caching
+    - Record types: A (hostname to IP), NS (domain name to its authoritative name), CNAME (canonical name), MX (canonical name for a mail server)
+- Client-server model vs. P2P model: N copies transmission example
+  - Client-server: Tmin = max { NF / us, F / dmin }
+  - P2P: Tmin = max { F / us, F / dmin, NF / (us + sum ui) }
+  - BitTorrent: get chunks by rarest first, send chunks by tit-for-tat (send to those who send me the most) and optimistically unchoke
+
+## Chapter 3: Transport Layer
+- Transport layer (process to process) vs. Network layer (host to host)
+- Multiplexing and demultiplexing: how multiple sockets send data to or receive data from network layer
+  - TCP/UDP segment contains both source port and dest port, but no IP addresses. Different protocols can be identified in IP datagram.
+  - UDP demultiplexing: socket identified by (dest IP, dest port)
+  - TCP demultiplexing: socket identified by (source IP, source port, dest IP, dest port)
+- Connectionless transport: UDP
+  - Characteristics: simple, best effort, connectionless, lower cost (no connection delay, no state maintenance, smaller segment header 8 bytes, no congestion control)
+  - Error detection: checksum, 1’s complement of sums of all 16-bit integers (carry bit from MSB needs to be added), no error recovery
+- Principles of reliable data transfer
+  - Important components
+    - Checksum: detect bit-level errors
+    - Sequence number: remove redundant receptions
+    - Duplicate ACKs: simplify the design of ACK + NAK for indication of loss
+    - Countdown timer: retransmit upon loss and delay
+  - ARQ: automatic repeat request protocols, RDTs based on retransmission
+    - Stop-and-wait (alternating bit protocol): sequence number either 0 or 1
+    - Go-back-N (sliding-window protocol)
+      - Sender: a window of size N for packets sent (or to be sent) but not yet ACKed with a single timer for the earliest such packet, retransmit all such packets if timeout
+      - Receiver: discard all out-of-order packets and send cumulative ACKs
+    - Selective repeat
+      - Sender: a window of size N for packets sent (or to be sent) but not yet ACKed with multiple timers, one for each such packet, retransmit only those not yet ACKed
+      - Receiver: buffer out-of-order packets and send individual ACKs
+      - To tell retransmission from new packets, window\_size <= sequence\_size / 2
+- Connection-oriented transport: TCP
+  - Characteristics: reliable, pipelined, buffer, connection-oriented, full-duplex, flow control
+  - TCP segment: 20-byte header, SEQ number = number of first byte in the stream, ACK number = expected next SEQ number
+  - TCP reliable data transfer
+    - Cumulative ACK, single retransmission timer, retransmit if timeout or duplicate ACKs
+    - Fast retransmission: retransmit once 3 duplicate ACKs are received before timeout
+    - RTT estimated by moving average, timeout value = estimated RTT + 4 * deviation of RTT (a safety margin)
+  - Connection management: three-way handshake
+    - Start a connection: 0) client initializes seq number, buffer, etc., 1) client sends SYN with initial seq number, 2) server sends SYNACK with initial seq number and allocate buffer, 3) client sends ACK with optional data
+    - Close a connection: 1) client sends FIN, 2) server sends ACK, ready to close and sends FIN, 3) client sends ACK and connection closed when ACK reaches server
+  - Flow control: dealing with the capacity of the receiver
+    - Matching sender’s sending rate and receiver’s reading rate to prevent overflow in receiver’s buffer
+    - Receiver includes receiving window size in TCP segment, and sender limits unACKed data to this size
+  - Congestion control: dealing with the capacity of the network
+    - AIMD (additive increase multiplicative decrease), transmission rate = cwnd / RTT
+    - Slow start: start with cwnd = 1MSS and grow exponentially
+    - Congestion avoidance: grow linearly when cwnd reaches a threshold
+    - Fast recovery: fast retransmission if duplicate ACKs are received
+    - Timeout event: ssthresh = cwnd / 2, cwnd = 1MSS, then slow start
+    - Duplicate ACKs: same as timeout for TCP Tahoe, cwnd = ssthresh + 3 for TCP Reno, then congestion avoidance
+  - TCP fairness: UDP and parallel connections
+
+## Chapter 4: Network Layer
+- Network layer key functions
+  - Forwarding: move packets from router’s input to appropriate output
+  - Routing: determine the route taken by packets from source to dest
+- Connection services (between hosts, implemented in network core)
+  - Virtual circuits: connection-oriented, used in ATM
+    - Connection setup: choose a path between source and dest, a VC number for each link along the path, and add entries to the forwarding table in relevant routers
+    - Routers maintain connection state information, resources may be allocated to VC
+  - Datagram networks: connectionless, used in Internet
+    - No state about connections, packets forwarded using dest host address (longest prefix matching in forwarding table)
+- Routers
+  - Input port: queued for lookup in the forwarding table, then forward to switching fabric (memory / bus / crossbar)
+  - Output port: buffering and scheduled transmission (e.g. first come first serve, or for QoS purposes), buffer overflow in either port can lead to packet loss
+- IP: Internet protocol
+  - IPv4 datagram: 20-byte header, datagram fragmentation and reassembly
+  - IPv4 addressing: classful (A/B/C/D) -> CIDR a.b.c.d/x where high x bits are subnet part
+  - DHCP: dynamically obtain an IP address when a host joins the network
+    - Host DHCP discover -> server DHCP offer -> host DHCP request -> server DHCP ack, use broadcast address 255.255.255.255 all along
+  - NAT: network address translation, changes inside and outside LAN are independent
+    - Entries (source IP, source port) <-> (NAT IP, new port) stored in NAT translation table
+    - NAT traversal: static configuration / UPnP automatic NAT map configuration
+  - ICMP: Internet control message protocol, messages carried in IP payload (ping 8)
+  - IPv6
+    - Motivation: larger address space, header changes to speed processing / forwarding and facilitate QoS
+    - Datagram: fixed 40-byte header, no fragmentation, checksum removed
+    - Tunneling: IPv6 carried as payload in IPv4 datagram among IPv4 routers
+- Routing algorithms
+  - Link state algorithm: global knowledge needed
+    - For each iteration, pick a node w with minimum D(w), and update D(v) = min( D(v), D(w) + c(w, v) )
+    - Oscillations possible when running LS multiple times, partly solved by preventing all routers from running LS at the same time
+  - Distance vector algorithm: decentralized, asynchronous
+    - Each node x maintains its distance vector and their neighbors’, iterate at node x by Dx(y) = minv ( c(x, v) + Dv(y) ) where v is a neighbor
+    - Count-to-infinity problem: good news travels fast, bad news travels slow
+    - Poisoned reverse: Z tells Y that D(Z, X) is infinity if Z routes through Y to get to X, not completely solves the count-to-infinity problem
+  - Comparison: message complexity (DV), speed of convergence (?), robustness (LS)
+  - Hierarchical routing: aggregate router into autonomous systems (AS)
+    - Run same protocol in the same autonomous system
+    - Gateway router: direct link to routers in another AS, forwarding table configured by both intra- and inter-AS routing algorithms
+    - Inter-AS protocol maintains reachability info over AS’s and determines towards which gateway to forward packets for dest in another AS
+    - Hot-potato routing: choose the gateway with the smallest intra-AS cost
+  - Routing in the Internet
+    - Intra-AS routing: RIP (use DV, dist = # of hops), OSPF (use LS)
+    - Inter-AS routing: BGP (de facto)
+
+## Chapter 5: Link Layer
+- Link layer services: a combination of software and hardware
+  - MAC: medium access control, to coordinate frame transmission of multiple nodes
+  - Reliable delivery: used on error-prone links, e.g. wireless links
+  - Error detection and correction
+  - Implemented in network adaptors, usually integrated onto host’s motherboard
+- Error detection and correction (EDC)
+  - Parity check: single bit parity, 2-D parity (able to correct one but not two errors)
+  - Checksum: 1’s complement of sums of all 16-bit integers
+  - Cyclic redundancy check (CRC): widely used in Ethernet, 802.11, ATM, etc.
+    - Given data D and (r+1)-bit pattern G, calculate r CRC bits by R = D x 2^r mod G, then [D, R] should divide G (done in modulo 2 arithmetic)
+- Multiple access protocols
+  - Channel partitioning protocols: TDMA, FDMA, CDMA
+    - CDMA: encode by bits multiplied by an M-bit code, decode by sum of input multiplied by code divided by M, different senders use orthogonal codes
+  - Random access protocols
+    - Slotted ALOHA
+      - Time divided into slots, nodes are synchronized and only transmit at the slot beginning, transmission of two or more nodes in a slot leads to collision, when collision occurs retransmit with probability p until success
+      - Efficiency: 1/e = maximum of Np(1-p)N-1 as N goes to infinity
+    - Pure ALOHA
+      - Unslotted and no synchronization
+      - Efficiency: 1/2e = maximum of p(1-p)2(N-1) as N goes to infinity
+      - Fewer assumptions lead to better practicality but worse performance
+    - CSMA (carrier sense multiple access): listen before talk
+      - Propagation delay means two nodes may not hear each other’s transmission
+      - CSMA/CD: detect collision within short time, abort colliding transmissions, send a jam signal and wait for a random amount of time for retransmission
+      - Collision detection: easy in wired links (compare transmitted and received signals) but difficult in wireless (received signal overwhelmed by local transmission)
+      - Binary exponential backoff: choose K randomly from 0 to 2n-1 after n collisions, and wait for a period of K * 512 bit times (K <= 10), give up after 16 failures
+      - p-persistent CSMA: transmit with probability p if medium is idle
+  - Taking-turns protocols
+    - Polling: master node invites slave nodes to transmit in turn
+    - Token passing: control token passed from one node to the next in a sequential order
+    - Drawbacks: overhead, latency, single point of failure
+- Link-layer addressing
+  - MAC address: 48-bit, burned in ROM, portable, ff-ff-ff-ff-ff-ff for broadcast
+  - ARP: Address resolution protocol
+    - ARP table in each host / router maintains mappings from IP address to MAC address
+    - If IP address (in the same subnet) not in table, an ARP query packet containing dest IP is broadcasted, and dest host replies with its MAC address in an ARP response packet (unicast), leading to an update of ARP table
+    - If IP address (in another subnet) not in table, A uses ARP to get the router R’s MAC address, sends frame with R’s MAC as dest and A-to-B IP datagram, R retrieves datagram, uses ARP to get B’s MAC address and creates frame to send to B
+- Ethernet (802.3)
+  - Bus topology (coaxial cable) -> star topology (hub -> switch)
+  - Ethernet frame: 8-byte preamble for synchronization, 48-bit dest/source MAC address
+  - No connection between NICs, use unslotted CSMA/CD with binary exponential backoff
+- Hub: physical-layer repeaters, bits sent to all nodes, no frame buffering or CSMA/CD
+- Switch: link-layer smart device, selectively store-and-forward, no collision, full-duplex
+  - Switch table: (host MAC address, interface to reach host, time stamp), self-learning entries, broadcast if entry not found
+  - Comparison with router: both store-and-forward, network / link layer, routing / switch tables, routing / filtering & learning algorithms
+
+## Chapter 6: Wireless and Mobile Networks
+- Wireless networks
+  - Elements: hosts, base station (e.g. 802.11 access points), wireless link
+  - Infrastructure mode (connected to base stations, e.g. Wifi and cellular) vs. ad hoc mode (no base stations, e.g. bluetooth)
+  - Characteristics: decreased signal strength, interference from other sources, multi-path propagation
+  - SNR (signal-to-noise ratio) vs. BER (bit-error ratio), negative relation
+  - Hidden terminal problem (A <-> B <-> C) and signal attenuation
+- IEEE 802.11 Wireless LAN
+  - Host scans for channels available (active / passive scanning) and selects an AP to associate with
+  - CSMA/CA: collision avoidance instead of collision detection
+    - Exchange RTS (ready-to-send) and CTS (clear-to-send) packets before transmission, only used for frames larger than RTS threshold. ACK is needed.
+    - DIFS (longer interval) and SIFS (shorter interval): DIFS - (RTS - SIFS - CTS - SIFS) - data - SIFS - ACK - DIFS - …
+    - Backoff when channel is busy, randomly choose from [0, ContentionWindow], timer frozen when busy, and increase backoff when ACK lost
+  - 802.11 frame: receiver MAC + sender MAC + (AP attached) router interface MAC
+  - Mobility within the same subnet: self-learning by switch
+  - Advances: rate adaptation (physical layer techniques for lower BER), power management (sleep until the next beacon frame which contains an AP-to-mobile frame)
+- Mobile networks
+  - Concepts: home network / home agent / permanent address / visited network / foreign agent / care-of-address (COA) / correspondent
+  - Indirect routing: correspondent -> home agent -> foreign agent -> mobile
+  - Direct routing: correspondent —(after knowing COA from home agent)—> foreign agent -> mobile
+  - More mobility (used in practice): correspondent -> anchor agent —(after new foreign agent notifies old one)—> new foreign agent -> mobile
+  - Agent discovery: agents broadcasting ICMP messages
+- Mobility in cellular networks
+  - Concepts: BSS / home MSC / visited MSC
+  - Handoff within an MSC: old BSS to MSC -> MSC sets new BSS -> new BSS allocates, signals MSC and old BSS -> old BSS to mobile -> mobile to new BSS (to MSC) -> MSC-to-old-BSS released
+  - Handoff between MSCs: anchor MSC, the first MSC visited
+
+## Chapter 7-8: Multimedia and Security
+- Multimedia applications:
+  - Characteristics: delay-sensitive, loss-tolerant
+  - Classification: stored streaming, live streaming, real-time interactive
+  - Stored streaming
+    - Client-side buffering: playout delay compensates for network delay
+    - UDP faster, TCP larger playout delay but pass more easily through firewalls
+    - User control: RTSP, out-of-band control similar to FTP
+    - Fixed playout delay vs. adaptive playout delay
+  - Recovery from packet loss: send n chunks along with their xor / send lower resolution stream as redundant information / packet contains small units from different chunks (no redundancy but larger playout delay)
+  - Protocols: RTP (real time), RTCP (real time control), SIP (telephone calls, for handshake)
+- CDN: Content Distribution Network, replicate content in other servers throughout Internet
+- QoS: Quality of Services
+  - Scheduling mechanisms: choose next packet to send on link
+    - FIFO / Priority scheduling / Round-robin scheduling / Weighted fair queueing (WFQ)
+  - Policing mechanisms: limits on traffic — token bucket
+  - WFQ + token bucket = upper bound on delay (QoS guarantees)
+- Network security
+  - Confidentiality: encryption and decryption
+  - Authentication: confirm identity
+  - Message integrity: ensure message not altered
+  - Access and availability
+- Confidentiality: basics of cryptography
+  - Symmetric key cryptography
+    - Substitution cipher: easy to break
+    - DES: Data Encryption Standard, 64-bit plaintext and 56-bit key, use block ciphers
+    - AES: Advanced Encryption Standard, 128-bit plaintext and 128/192/256-bit key
+    - Cipher block chaining: apply block cipher to input xor previous cipher-text
+  - Public key cryptography (asymmetric)
+    - Encrypt with public key, decrypt with private key
+    - RSA algorithm
+      - Choose prime numbers p and q, compute n = pq and z = (p-1)(q-1), choose e (< n) coprime to z, and choose d such that e*d mod z = 1
+      - Public key (n, e), private key (n, d)
+      - For plaintext m, encrypt by c = m^e mod n, decrypt by m = c^d mod n
+- Message integrity
+  - Cryptographic hash: produce fixed length value and hard to find collisions
+  - MAC: Message Authentication Code
+    - Append hash value of (m plus a shared secret s) to the message
+    - E.g. MD5 (128-bit) and SHA-1 (160-bit)
+  - Digital signatures
+    - Sign message by encryption with his private key, decryption with public key proves signature if original message is recovered
+    - Sign MAC of large messages to save time
+  - Public key certification: certification authorities (CA), encrypt public key of an entity with CA’s private key, and it can be retrieved by decrypting with CA’s public key
+- Authentication
+  - Playback attack: Trudy records packets and later plays it back
+  - Avoid playback attack
+    - Symmetric key: Bob sends nonce R and Alice should reply with R encrypted by shared secret key
+    - Public key: Bob sends R, Alice sends public key and R encrypted with private key
+  - Man-in-the-middle attack: Trudy poses as Alice (to Bob) and as Bob (to Alice), difficult to detect
