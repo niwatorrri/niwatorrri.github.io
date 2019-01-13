@@ -4,6 +4,7 @@ title: "认知神经科学 笔记"
 subtitle: "Notes on Cognitive Neuroscience"
 author: "Tori"
 header-style: text
+comments: true
 tags:
 - Neuroscience
 - Cognitive science

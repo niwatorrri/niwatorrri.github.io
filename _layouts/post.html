@@ -100,6 +100,10 @@ layout: default
     </div>
 </article>
 
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}
+
 <!-- add support for mathjax by voleking-->
 {% if page.mathjax %}
   {% include mathjax_support.html %}
