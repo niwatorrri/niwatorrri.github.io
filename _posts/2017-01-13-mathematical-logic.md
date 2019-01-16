@@ -3,6 +3,7 @@ layout: post
 title: "说说数理逻辑"
 subtitle: "Some Thoughts on Mathematical Logic"
 author: "Tori"
+mathjax: true
 header-style: text
 tags:
 - Mathematics
