@@ -9,7 +9,8 @@ tags:
 - Languages
 ---
 
-[TOC]
+- TOC
+{:toc}
 
 ## Lecture 1: 总论
 

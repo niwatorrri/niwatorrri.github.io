@@ -78,7 +78,7 @@ ga_domain: niwatori.io
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Data Science and Cognitive Science"
+sidebar-about-description: "A Data Science and Psychology Guy"
 sidebar-avatar: /img/avatar-tori.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
