@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "认知神经科学 笔记"
-subtitle: "Notes on Cognitive Neuroscience"
+title: "认知神经科学导引"
+subtitle: "Fundamentals of Cognitive Neuroscience"
 author: "Tori"
 header-style: text
 comments: true
