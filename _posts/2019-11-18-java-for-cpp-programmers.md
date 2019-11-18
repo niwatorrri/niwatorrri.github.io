@@ -8,16 +8,16 @@ tags:
 - Computer Science
 ---
 
-Reference: https://www.seas.upenn.edu/~cis1xx/resources/JavaForCppProgrammers/j-javac-cpp-ltr.pdf
+Reference: <https://www.seas.upenn.edu/~cis1xx/resources/JavaForCppProgrammers/j-javac-cpp-ltr.pdf>
 
 - TOC
 {:toc}
 
 ## Compile and run: a simple example
 
-Assume we have a `Factorial.java` file:
+Assume we have a `Factorial.java` file that returns the factorial of a given non-negative integer:
 
-```Java
+```java
 public class Factorial {
     public static void main(String[] args) {
         if (args.length != 0) {
@@ -29,7 +29,7 @@ public class Factorial {
     private static int factorial(int fact) {
         int result = fact;
         if (fact == 0)
-            return result;
+            return 1;
         else {
             while (fact != 1)
                 result *= --fact;
@@ -77,11 +77,11 @@ Primitive data types
 
 - arrays: declared as objects using the new operator, reaching out of bound will throw an exception; has a length attribute
 
-- ```java
-  int[] scores = new int[100];
-  char[] grades = {'A', 'B', 'C'};
-  int[][] array = { {1, 2}, {3, 4} };
-  ```
+```java
+int[] scores = new int[100];
+char[] grades = {'A', 'B', 'C'};
+int[][] array = { {1, 2}, {3, 4} };
+```
 
 - strings: immutable, declared with `String str = "Hello world!";`
 
@@ -93,13 +93,13 @@ Other differences:
 - Methods: i.e. functions in C, MUST be defined inside a class, can be invoked before declaration
 - The main() method MUST be declared as follows: argc can be determined by args.length
 
-- ```java
-  public static void main(String[] args)
-  ```
+```java
+public static void main(String[] args)
+```
 
 - private and public are modifiers but not labels in Java; constructor should be used with new operator
 
-##Java Classes
+## Java Classes
 
 An example: `Account.java`
 
@@ -230,7 +230,7 @@ public class CheckingAccount extends Account {
 }
 ```
 
-Preferred modifier order: [public|protected|private] static abstract final class
+Preferred modifier order: [public/protected/private] static abstract final class
 
 Interfaces: deal with multiple inheritance
 
@@ -238,7 +238,8 @@ Interfaces: deal with multiple inheritance
 - All members defined in an interface are implicitly public
 - All fields defined in an interface are implicitly static and final 
 - An interface cannot be instantiated, so no constructors
-- Declared with `interface` keyword instead of `class`; can inherit from multiple interfaces; Extends classes <-> Implements interfaces, can do simultaneously `class A extends B implements C`
+- Declared with `interface` keyword instead of `class`; can inherit from multiple interfaces
+- Extends classes <-> Implements interfaces, can do simultaneously `class A extends B implements C`
 
 ```java
 interface Account {
