@@ -83,7 +83,7 @@ char[] grades = {'A', 'B', 'C'};
 int[][] array = { {1, 2}, {3, 4} };
 ```
 
-- strings: immutable, declared with `String str = "Hello world!";`
+- strings: immutable, declared with `String str = "Hello world!";`, has multiple methods available
 
 Other differences:
 
@@ -194,7 +194,9 @@ The `Object` class
 
 - All Java classes are ultimately subclasses of the `Object` class
 - It has methods, e.g. `toString()` that can be overridden
-- can define structures that take objects of class `Object`, similar to C++ templates
+- Can define structures that take objects of class `Object`, similar to C++ templates
+
+## Abstract classes and Interfaces
 
 Abstract class: using `abstract` modifier
 
