@@ -1,0 +1,187 @@
+{
+  "name": "Crime rate > 0.005?",
+  "children": [
+    {
+      "name": "Unemployment rate > 4.608?",
+      "children": [
+        {
+          "name": "Unemployment rate > 4.992?",
+          "children": [
+            {
+              "name": "Crime rate > 0.005?",
+              "children": [
+                {
+                  "name": "Income > 56591.5?",
+                  "children": [
+                    {
+                      "name": "Predict: Medium overdose level"
+                    },
+                    {
+                      "name": "Predict: High overdose level"
+                    }
+                  ]
+                },
+                {
+                  "name": "Income > 51898.0?",
+                  "children": [
+                    {
+                      "name": "Predict: High overdose level"
+                    },
+                    {
+                      "name": "Predict: Medium overdose level"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Predict: High overdose level"
+            }
+          ]
+        },
+        {
+          "name": "Income > 55123.0?",
+          "children": [
+            {
+              "name": "Predict: Extreme overdose level"
+            },
+            {
+              "name": "Crime rate > 0.006?",
+              "children": [
+                {
+                  "name": "Predict: Extreme overdose level"
+                },
+                {
+                  "name": "Crime rate > 0.005?",
+                  "children": [
+                    {
+                      "name": "Predict: Medium overdose level"
+                    },
+                    {
+                      "name": "Predict: High overdose level"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Income > 66326.0?",
+      "children": [
+        {
+          "name": "Crime rate > 0.002?",
+          "children": [
+            {
+              "name": "Crime rate > 0.002?",
+              "children": [
+                {
+                  "name": "Crime rate > 0.003?",
+                  "children": [
+                    {
+                      "name": "Predict: Extreme overdose level"
+                    },
+                    {
+                      "name": "Predict: Medium overdose level"
+                    }
+                  ]
+                },
+                {
+                  "name": "Income > 69853.5?",
+                  "children": [
+                    {
+                      "name": "Predict: High overdose level"
+                    },
+                    {
+                      "name": "Predict: Medium overdose level"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Unemployment rate > 5.435?",
+              "children": [
+                {
+                  "name": "Predict: High overdose level"
+                },
+                {
+                  "name": "Income > 72145.0?",
+                  "children": [
+                    {
+                      "name": "Predict: Extreme overdose level"
+                    },
+                    {
+                      "name": "Predict: Medium overdose level"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Unemployment rate > 4.196?",
+          "children": [
+            {
+              "name": "Crime rate > 0.003?",
+              "children": [
+                {
+                  "name": "Income > 55281.0?",
+                  "children": [
+                    {
+                      "name": "Predict: Low overdose level"
+                    },
+                    {
+                      "name": "Predict: Medium overdose level"
+                    }
+                  ]
+                },
+                {
+                  "name": "Income > 44460.5?",
+                  "children": [
+                    {
+                      "name": "Predict: Extreme overdose level"
+                    },
+                    {
+                      "name": "Predict: Low overdose level"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Crime rate > 0.002?",
+              "children": [
+                {
+                  "name": "Unemployment rate > 3.865?",
+                  "children": [
+                    {
+                      "name": "Predict: Low overdose level"
+                    },
+                    {
+                      "name": "Predict: Low overdose level"
+                    }
+                  ]
+                },
+                {
+                  "name": "Income > 57333.5?",
+                  "children": [
+                    {
+                      "name": "Predict: High overdose level"
+                    },
+                    {
+                      "name": "Predict: Medium overdose level"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

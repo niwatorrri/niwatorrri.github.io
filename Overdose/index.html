@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+
+<head>
+  <!-- BASICS -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Interactive Data Science</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+  <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="skin/default.css">
+  <link rel="stylesheet" href="css/overwrite.css">
+</head>
+
+<body>
+<section id="header" class="appear"></section>
+<div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(0,0,0,1);">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="fa fa-bars color-white"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
+        <li class="active"><a href="#first-page" data-toggle="tab">Home</a></li>
+        <li><a href="#second-page" data-toggle="tab">Prediction</a></li>
+        <li><a href="#third-page" data-toggle="tab">Data</a></li>
+      </ul>
+    </div>
+    <!--/.navbar-collapse -->
+  </div>
+</div>
+
+<div class="tab-content clearfix">
+
+  <div id="first-page" class="section appear clearfix tab-pane active">
+<section class="featured section appear clearfix">
+  <div class="container">
+    <div class="row mar-bot40">
+      <div class="col-md-6 col-md-offset-3">
+
+        <div class="align-center">
+          <i class="fa fa-flask fa-5x mar-bot20"></i>
+          <h2 class="slogan">Drug Overdose and Socioeconomics in the U.S.</h2>
+          <p>
+            Drug overdose is currently one of the leading causes of death in the United States, surpassing firearms, car accidents, homicides, and HIV/AIDS. 
+            More Americans died from a drug overdose in 2017 alone than died in the entire Vietnam War.
+            <br><br>
+            Most of these deaths are preventable, but the "tough on crime" rhetoric of the decades-long drug war and the stigma associated with drug use have blocked the widespread adoption of life-saving overdose prevention and treatment policies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- services -->
+
+<section id="section-intro" class="section appear clearfix">
+
+  <div class="container">
+
+    <div class="row mar-bot40">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="section-header">
+          <h2 class="section-heading animated" data-animation="bounceInUp">
+            Introduction: What is Overdose?</h2>
+          <p>
+            An overdose is a biological response to when the human body receives too much of a substance or mix of substances. An
+            overdose can be intentional or accidental. People can overdose on illicit drugs, alcohol, prescription medications, and
+            many other substances. The video below introduces what happens when you overdose.
+          </h4>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="align-center">
+      <iframe width="800" height="600" style='position: relative' src="https://www.youtube.com/embed/xLSz3wEgwJ8">
+      </iframe>
+    </div>
+
+    <div class="row mar-bot40">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="section-header">
+          <div class="align-left">
+              <p>
+                <strong>In this project, we are going to investigate the VSRR Provisional Drug Overdose Death Counts dataset</strong> to have a peek at the trend of drug overdoses across the Unites States and potentially inform national institutions of best practices and policies. The dataset reports provisional counts of deaths due to drug overdose occurring nationally grouped by different drug classes from 2015 to 2018.
+                <br><br>
+                In addition to an exploration into the drug overdose death counts, we are also curious regarding what factors are correlated or influential on these count numbers. And therefore, <strong>for each state we also gathered their <i>household incomes, unemployment rates, crime rates</i> and <i>population</i> over the years</strong>, seeking potential relationships between demographics, social structures and drug overdoses.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- spacer section:testimonial -->
+<section id="testimonials" class="section" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="align-center">
+          <div class="testimonial pad-top40 pad-bot40 clearfix">
+            <h5>
+              “If you want to be lost in something, be lost in something good.”
+            </h5>
+            <br/>
+            <span class="author">&mdash; International Overdose Awareness Day Slogan 2019 </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section id="section-services" class="section pad-bot30 bg-white">
+    <div class="container">
+  
+      <div class="row mar-bot40">
+        <div class="col-lg-4">
+          <div class="align-center">
+            <i class="fa fa-camera fa-5x mar-bot20"></i>
+            <h4 class="text-bold">Comparison View</h4>
+            <p>Where is the worst of the overdose problem?
+            </p>
+          </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="align-center">
+            <i class="fa fa-eye fa-5x mar-bot20"></i>
+            <h4 class="text-bold">Trending View</h4>
+            <p>Which drug has been causing more deaths?
+            </p>
+          </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="align-center">
+            <i class="fa fa-bolt fa-5x mar-bot20"></i>
+            <h4 class="text-bold">Correlation View</h4>
+            <p>What social factors are related to drug overdose?
+            </p>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+
+<!-- Amazing Graphs -->
+<section id="section-graphs" class="section appear clearfix">
+  <div class="container">
+
+    <div class="row mar-bot40" style="background:rgba(209, 209, 209, 0.9)">
+      <div class="col-md-offset-3 col-md-6">
+        <div class="section-header">
+          <br>
+          <br>
+          <h2 class="section-heading animated" data-animation="bounceInUp">Comparison View -- Around U.S.</h2>
+          <h3>Where is the worst of the overdose problem?</h3>
+          <br>
+          <br>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Geospatial graph -->
+    <div class="row align-center mar-bot40" >
+      <div class="col-md-offset-2">
+        <div class='tableauPlaceholder' id='viz1575628683485' style='position: relative'>
+          <noscript>
+            <a href='#'>
+              <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ge&#47;geo_15755775565780&#47;Sheet1&#47;1_rss.png' style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='geo_15755775565780&#47;Sheet1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ge&#47;geo_15755775565780&#47;Sheet1&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='filter' value='publish=yes' />
+          </object>
+        </div>
+      </div>
+    </div>
+
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1575628683485');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width='90%';vizElement.style.height=(divElement.offsetWidth*0.6)+'px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
+
+    <!-- Geospatial graph Analysis -->
+    <div class="container"  >
+      <div class="row">
+        <div class=" col-md-offset-2 col-md-8">
+          <div class="align-left">
+            <p>
+              As can be seen from the figure above, <strong>the middle U.S. generally enjoys the lowest drug overdose death rate across the nation over the years</strong>, followed by western U.S. where drug overdose has become a non-negligible social issue. <strong>Eastern U.S. has the most complicated distribution</strong> --- West Virginia has always got the first place in terms of drug overdose from 2015 to 2018, and the neighboring states also seem to be affected and have noticeably higher overdose death rates than those further from West Virginia.
+            <br><br>
+              By selecting different types of drug overdose, we observe that <b> overdoses of cocaine and opioids are mostly happening in the eastern U.S.</b>, particularly including West Virginia, Ohio and Rhode island doing cocaine, and also their neighboring states (e.g. Maryland, Massachusetts, New Hampshire) doing opioids. Heroin and methadone overdoses are more or less distributed in both the western and the eastern U.S. <b>Psychostimulant overdoses, however, are much more dominated in the western U.S.</b>, including Nevada, New Mexico, Utah, Washington, etc. Washington has seen a decrease in their psychostimulant overdose, while the others have seen increases along with rapidly increasing West Virginia over the years.
+            </p>
+          </div>
+            <br><br>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Trending View Header -->
+    <div class="row mar-bot40" style="background:rgba(209, 209, 209, 0.9)">
+      <div class="col-md-offset-1 col-md-10 align-center">
+        <div class="section-header">
+          <br>
+          <br>
+          <h2 class="section-heading animated" data-animation="bounceInUp">Trending View -- Changing Trends</h2>
+          <h3>Which drug has been causing more deaths?</h3>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trending View Graph -->
+    <div class="row align-center mar-bot40">
+      <iframe width="900" height="600" frameborder="0" scrolling="no" src="//plot.ly/~cherie11/43.embed"></iframe>
+    </div>
+
+    <!-- Trending View Analysis -->
+    <div class="container"  >
+      <div class="row">
+        <div class=" col-md-offset-2 col-md-8">
+          <div class="align-left">
+            <p>
+              <b>Explanation:</b> The above graph visualizes the overall death rate and individual death rates of 5 different drug types in each state.
+              The five drug types include Cocaine, Opioids, Heroin, Methadone and Psychostimulants.
+              As some of the states does not have the overdose death data of some of the drug types, the number of lines of some states can be fewer than 6. Moreover, some states does not have complete data for some drug types throughout the last five years. Thus you may also see some lines shorter than others on the graphs of some states.
+            <br><br>
+              <b>Interpretation:</b> The above graph shows increasing trends in overall overdose death in most of the states in recent years. 
+              From 2018 to 2019, some of the states, such as West Virginia, show a slight decrease in overall death rate, .
+              However, some other states, such as California, show an opposite trend.
+              Among the five drugs: Cocaine, Opioids, Heroin, Methadone and Psychostimulants, Opioids contributes the most overdose deaths, whose death rate is nearly the sum of the death rates of the other drug types.
+            <br><br>      
+              <b>Interaction:</b> 
+            <br>
+              1. You can select a state from the dropdown list on the left-hand side to view overdose death rate trends of the state.
+            <br> 
+              2. You can zoom in or zoom out using the buttons on the top right.
+            <br>
+              3. You can select a sub-area on the graph using your left mouse button to zoom in to the specific area.
+            <br>
+              4. You can switch from showing closest data on hover to comparing data on hover by selecting clicking the double-arrow botton on the top right. Clicking the single-arrow button would switch you back.
+              <br><br>      
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Correlation View -->
+    <div class="row mar-bot40" style="background:rgba(209, 209, 209, 0.9)">
+      <div class="col-md-offset-1 col-md-10 align-center">
+        <div class="section-header">
+          <br><br>
+          <h2 class="section-heading animated" data-animation="bounceInUp" >Correlation View -- Social Factors</h2>
+          <h3 >What social factors are related to drug overdose?</h3>
+          <br><br>
+        </div>
+      </div>
+            <br>
+            <br>
+    </div>
+
+    <div class="row align-center mar-bot40">
+      <table >
+        <tr  align="left">
+          <h4>Please select a factor from below:</h4>
+          <select onchange="ShowImage(parseInt(this.value), 'image');">
+            <option selected="selected" value="1">Medium Household Income</option>
+            <option value="2">Unemployment rate</option>
+            <option value="3">Crime rate</option>
+
+          </select>
+        </tr>
+        <tr   valign="top">
+          <div   style="display:block"  id="image1">
+            <iframe  scrolling="auto" width="900" height="700"  frameborder="0"   allowfullscreen
+                     src="http://localhost:8000/Overdose/fig_income.html"></iframe>
+          </div>
+          <div   style="display:none" width="900" height="700"    id="image2">
+            <iframe  scrolling="auto"  frameborder="0" style="max-width:900px;resize:both;"  allowfullscreen
+                     src="http://localhost:8000/Overdose/fig_unemploy.html" width="900" height="700" ></iframe>
+          </div>
+          <div   style="display:none"  id="image3">
+            <iframe  scrolling="auto"  frameborder="0"   allowfullscreen
+                     src="http://localhost:8000/Overdose/fig_crime.html" width="900" height="700" ></iframe>
+          </div>
+        </tr>
+      </table>
+    </div>
+
+        <div class="container"  >
+          <div class="row">
+            <div class=" col-md-offset-2 col-md-8">
+              <div class="align-left">
+                <h3> Household income</h3>
+                <p>
+                    
+                    <b>Question: Is household income of a state related to overdose death rate?</b>
+                    <br>
+                  <br>
+
+                    In order to answer this question, we collected median household income data of each state from 2015 to 2019. We then
+                    plot a bubble chart to show the correlation between household income and median household income. The size of each
+                    bubble indicates the population of the state.
+                    <br>
+                    <br>
+                    As we can see from the below plot, there is no clear correlation between overdose death rate and median household
+                    income.
+                    
+                    However, we can see that overdose death rate of the states with lower household income tend to increase faster than
+                    other states. For example, we can see that West Virginia has comparatively low income improvement but very rapid
+                    overdose death rate increase. On the other hand, the median income of Florida increases rapidly and its overdose death
+                    rate remains at the same level during these 5 years.
+                    
+                    Therefore, we suspect that there might be negative correlation between overdose death growth rate and median household
+                    income growth rate. This could be a further research hypothesis to test on.
+                </p>
+                <br>
+                <h3> Unemployment Rate</h3>
+                <p>
+                
+                  <b>Question: Is unemployment rate of a state related to overdose death rate?</b>
+                  <br>
+                  <br>
+
+                  Now let's take a look at how drug overdose and unemployment is related. To achieve this, we make a bubble plot of death
+                  rate and unemployment rate. As we can see from the interactive figure, the drug overdose death rate and unemployment rate are basically positively
+                  correlated. This means the more people are unemployed, the more likely the overdose death rate is higher. The size of
+                  this correlation should be determined quantitatively and its changing trend is also interesting to investigate.
+                  <br>
+                  <br>
+
+                  Note, however, this does not imply causality. In general, the unemployment rate has been decreasing over time, while for
+                  some states the death rate even goes higher and higher. Why could this happen? It is a sociology question that needs to
+                  be carefully considered.
+                </p>
+                <br>
+                <h3> Violent Crime Rate</h3>
+                <p>
+                
+                  <b>Question: Is violent crime rate of a state related to overdose death rate?</b>
+                  <br>
+                  <br>
+
+                  We also gather the violent crime data for each state from 2014 to 2018. We would
+                  like to explore the correlation between the overdose death rate and the violent crime rate as the overdose is likely to
+                  cause violent crime according to the news.
+                  <br>
+                  <br>
+
+                  According to the figure, the violent crime amount and overdose death number have relatively positive correlation as we
+                  expected. But there are also some exceptions. For instance West Virginia has the highest age-adjusted rate of drug
+                  overdose deaths involving opioids <a href="https://www.drugabuse.gov/opioid-summaries-by-state/west-virginia-opioid-summary">[1]</a>, but the crime rate is relatively low.
+                  <br>
+                  <br>
+
+                  Also, the situation is getting better in 2016 compared with 2015, overdose rate in most of the states has dropped as
+                  well as the crime rate. However, after 2016, a sudden turn for the worse occurs. As for crime rate, some states show a
+                  decreasing trend, such as VA, NJ and CT. The common feature these states have is their low crime rate. In contrast, the
+                  cities with higher crime rate like CA, TN, MO have their crime rate increased.
+                </p>
+                <br>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+  </div>
+
+      <div class="row mar-bot40">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="section-header">
+          <h2 class="section-heading animated" data-animation="bounceInUp">
+            Now let's try to predict the drug overdose level!</h2>
+        </div>
+      </div>
+    </div>
+
+</section>
+  </div>
+
+
+<!-- predict -->
+  <div id="second-page" class="section appear clearfix tab-pane">
+    <section id="parallax1" class="section pad-top40 pad-bot40" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="align-center pad-top40 pad-bot40">
+          <blockquote class="bigquote color-white">Forecasting the Overdose Rate</blockquote>
+          <!--<p class="color-white">Bootstraptaste</p>-->
+        </div>
+      </div>
+    </section>
+<section id="section-predict" class="section appear clearfix">
+  <div class="container">
+
+    <div class="row mar-bot40">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="section-header">
+          <h2 class="section-heading animated" data-animation="bounceInUp">Decision Tree Prediction</h2>
+          <h4>Predict overdose death rate using demographics and social factors</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container"  >
+      <div class="row">
+        <div class=" col-md-offset-2 col-md-8">
+          <div class="align-left">
+            <p>
+              To estimate the overdose level of an arbitrary state, we first formulated four levels of
+              overdose danger based on the quartiles of the current death rates across all the states
+              in the U.S., labeled Low, Medium, High and Extreme respectively. Taking advantage of the
+              social demographical features including household income, unemployment rate and crime rate,
+              a decision tree classifier is trained to predict how a state with given attributes might
+              suffer from drug overdose. The decision path of the classifier is presented through the
+              interaction below.
+              <br><br>
+              <br><br>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row mar-bot40" style="background:rgba(209, 209, 209, 0.9)">
+      <div class="col-md-offset-3 col-md-6">
+        <div class="section-header">
+          <br>
+          <br>
+          <h2 class="section-heading animated" data-animation="bounceInUp">Decision Tree Visualization</h2>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="container"  >
+      <div class="row">
+        <div class=" col-md-offset-2 col-md-8">
+          <div class="align-left">
+            <p>
+                You can interact with the visualization by clicking the node in the tree. <br>
+                Choose your path based on the social stats of your state and see what will happen!
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-center mar-bot40">
+      <div id = "decisionTree">
+      </div>
+    </div>
+
+    <div class="row mar-bot40" style="background:rgba(209, 209, 209, 0.9)">
+      <div class="col-md-offset-3 col-md-6">
+        <div class="section-header">
+          <br>
+          <br>
+          <h2 class="section-heading animated" data-animation="bounceInUp">Feature Importance</h2>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="container"  >
+      <div class="row">
+        <div class=" col-md-offset-2 col-md-8">
+          <div class="align-left">
+            <p>
+                We also run a logistic regression model as a generalized linear method to estimate
+                the importance of each feature to the final prediction. The results are shown below.
+                <br>
+                [ Suggestion: draw a table of only coefficients and p-values ]
+                <br>
+                [ Feature importances returned by decision tree: [0.37112208, 0.26569569, 0.36318223] ]
+                <br><br>
+            </p>
+            <img width="800px" align="align-center" src="img/featured/importance.png" alt="" />
+            <br><br><br><br>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row mar-bot40" style="background:rgba(209, 209, 209, 0.9)">
+      <div class="col-md-offset-3 col-md-6">
+        <div class="section-header">
+          <br>
+          <br>
+          <h2 class="section-heading animated" data-animation="bounceInUp">Analysis</h2>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="container"  >
+      <div class="row">
+        <div class=" col-md-offset-2 col-md-8">
+          <div class="align-left">
+            <p>
+              From the feature importance table, we find that none of the features actually has a
+              statistically significant contribution to the prediction, according to the commonly
+              recognized significance threshold p<0.05. Linear correlation between
+              one variable of them and the overdose level is generally not observed --- but they
+              probably do have more complex interactions to be captured by a non-linear model.
+              <br><br>
+              Decision tree classifier informs us that income (x1) and crime rate (x3) are more
+              powerful in overdose level prediction when compared to unemployment rate. Yet many more
+              social factors are to be captured, and policy makers have to consider how they could
+              improve overdose awareness and reduce overdose death rate among the public.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  </div>
+
+
+  <div id="third-page" class="section appear clearfix tab-pane">
+<!-- spacer section:stats -->
+<section id="parallax1" class="section pad-top40 pad-bot40" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="align-center pad-top40 pad-bot40">
+      <blockquote class="bigquote color-white">Data Quality Analysis</blockquote>
+      <!--<p class="color-white">Bootstraptaste</p>-->
+    </div>
+  </div>
+</section>
+
+<!-- section works -->
+<section id="section-works" class="section appear clearfix">
+  <div class="container">
+
+    <div class="row mar-bot40">
+      <div class="col-md-offset-1 col-md-10">
+        
+          <!--<h2 class="section-heading animated" data-animation="bounceInUp">Data Quality Analysis</h2>-->
+          <p style="color:black">
+            Is the data Complete?
+            <br><br>
+            We started with <a href="https://healthdata.gov/dataset/vsrr-provisional-drug-overdose-death-counts">VSRR Provisional Drug Overdose Death Counts</a> dataset to have a peek at the trend of drug overdoses across the Unites States and potentially inform national institutions of best practices and policies. The dataset reports provisional counts of deaths due to drug overdose occurring nationally and in each jurisdiction for every 12 month-ending period and grouped by specific drugs or drug classes.
+            <br><br>
+            The <i>Period</i> column always takes the value "12 month-ending", so it brings us no benefit to keep this column. The <i>Footnote</i> and <i>Footnote Symbol</i> columns are only text comments that are not useful for our analysis and will be discarded.
+            <br><br>
+            Regarding the <i>Percent Pending Investigation</i> column, according to the dataset description, "drug overdose deaths often require lengthy investigations, and death certificates may be initially filed with a manner of death “pending investigation”. Jurisdictions are included if 1% or fewer of their records in National Vital Statistics System (NVSS) are reported as “pending investigation.”
+            <br><br>
+            Regarding the <i>Percent Complete</i> column, "NCHS receives monthly counts of the estimated number of deaths from each jurisdiction. The completeness is the percentage of the number of death records in the NVSS database over the received estimates. Jurisdictions are included if the percent completeness was consistently 90% or higher following a 6-month lag for the 12-month ending periods."
+            <br><br>
+            The dataset curator has already used some threshold in these columns to filter out some low quality numbers, so we won't make further use of these percent columns. 
+            The excluded numbers are presented as NaN in the table and will be discarded. 
+            The <i>Predicted Value</i> column is dedicated to compensating for long temporal delays and the incompleteness of reported deaths. Some of the 
+            predictions, however, are missing, so we will fill these numbers with the actual available <i>Data Value</i> column and drop the rest.
+            <br><br>
+            <div class="align-center">
+              <img width="600px" align="align-center" src="img/parallax/child.jpg" />
+            </div>
+            <br><br>
+            </p>
+            <p style="color:black">
+
+            To find other possibly related factors, we set out to collect complementary data sources for each state and  year from 2015 to 2019.
+            The first source is annual incomes, retrieved from <a href="https://www.census.gov/library/publications/2019/demo/p60-266.html">US Census Bureau: Income and Poverty in the United States</a>. The table includes the median income of households in each state from 2013 to 2019.
+
+            The second source is unemployment rate, retrieved from <a href="https://www.bls.gov/lau/" >Local Area Unemployment Statistics</a>. The table includes raw unemployment rate and number of labor force by each state and each month from January 2015 to September 2019.
+
+            The third source is crime rate, retrieved from <a href="https://ucr.fbi.gov/crime-in-the-u.s/2018/crime-in-the-u.s.-2018">FBI's Criminal Justice Information Services</a>. The table includes population, crime number and crime rate for each state from 2014 to 2018.
+            <br><br>
+            Note that some sources only provide data on a yearly basis, but others on a monthly basis. Therefore we need to take good care of this. When dealing with monthly data, we should divide the death count by 12 as a moving average over the 12-month period. When dealing with yearly data, we might want to only take the count that collected in December.
+
+            <br><br>
+            More data issues: All but three indicators are specific drugs or drug classes, and the three non-drug indicators are <i>Number of Drug Overdose Deaths</i>, <i>Number of Deaths</i> and <i>Percent with drugs specified</i>. In the <i>State Names</i> column, it can take the value of <i>District of Columbia</i>, <i>United States</i> and <i>New York City</i>, none of which are actually states.
+          </p>
+        </p>
+        
+      </div>
+      
+    </div>
+
+    <!-- <div class="row">
+      <nav id="filter" class="col-md-12 text-center">
+        <ul>
+          <li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
+          <li><a href="#" class="btn-theme btn-small" data-filter=".webdesign">Web Design</a></li>
+          <li><a href="#" class="btn-theme btn-small" data-filter=".photography">Photography</a></li>
+          <li><a href="#" class="btn-theme btn-small" data-filter=".print">Print</a></li>
+        </ul>
+      </nav>
+      <div class="col-md-12">
+        <div class="row">
+          <div class="portfolio-items isotopeWrapper clearfix" id="3">
+
+            <article class="col-md-4 isotopeItem webdesign">
+              <div class="portfolio-item">
+                <img src="img/portfolio/img1.jpg" alt="" />
+                <div class="portfolio-desc align-center">
+                  <div class="folio-info">
+                    <h5><a href="#">International Overdose Awareness Day Slogans</a></h5>
+                    <a href="img/portfolio/img1.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-md-4 isotopeItem photography">
+              <div class="portfolio-item">
+                <img src="img/portfolio/img2.jpg" alt="" />
+                <div class="portfolio-desc align-center">
+                  <div class="folio-info">
+                    <h5><a href="#">International Overdose Awareness Day Slogans</a></h5>
+                    <a href="img/portfolio/img2.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="col-md-4 isotopeItem photography">
+              <div class="portfolio-item">
+                <img src="img/portfolio/img3.jpg" alt="" />
+                <div class="portfolio-desc align-center">
+                  <div class="folio-info">
+                    <h5><a href="#">International Overdose Awareness Day Slogans</a></h5>
+                    <a href="img/portfolio/img3.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-md-4 isotopeItem print">
+              <div class="portfolio-item">
+                <img src="img/portfolio/img4.jpg" alt="" />
+                <div class="portfolio-desc align-center">
+                  <div class="folio-info">
+                    <h5><a href="#">International Overdose Awareness Day Slogans</a></h5>
+                    <a href="img/portfolio/img4.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-md-4 isotopeItem photography">
+              <div class="portfolio-item">
+                <img src="img/portfolio/img5.jpg" alt="" />
+                <div class="portfolio-desc align-center">
+                  <div class="folio-info">
+                    <h5><a href="#">International Overdose Awareness Day Slogans</a></h5>
+                    <a href="img/portfolio/img5.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-md-4 isotopeItem webdesign">
+              <div class="portfolio-item">
+                <img src="img/portfolio/img6.jpg" alt="" />
+                <div class="portfolio-desc align-center">
+                  <div class="folio-info">
+                    <h5><a href="#">International Overdose Awareness Day Slogans</a></h5>
+                    <a href="img/portfolio/img6.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-md-4 isotopeItem print">
+              <div class="portfolio-item">
+                <img src="img/portfolio/img7.jpg" alt="" />
+                <div class="portfolio-desc align-center">
+                  <div class="folio-info">
+                    <h5><a href="#">International Overdose Awareness Day Slogans</a></h5>
+                    <a href="img/portfolio/img7.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-md-4 isotopeItem photography">
+              <div class="portfolio-item">
+                <img src="img/portfolio/img8.jpg" alt="" />
+                <div class="portfolio-desc align-center">
+                  <div class="folio-info">
+                    <h5><a href="#">International Overdose Awareness Day Slogans</a></h5>
+                    <a href="img/portfolio/img8.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-md-4 isotopeItem print">
+              <div class="portfolio-item">
+                <img src="img/portfolio/img9.jpg" alt="" />
+                <div class="portfolio-desc align-center">
+                  <div class="folio-info">
+                    <h5><a href="#">International Overdose Awareness Day Slogans</a></h5>
+                    <a href="img/portfolio/img9.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div> -->
+
+  </div>
+</section>
+
+</div>
+</div>
+
+<section id="footer" class="section footer">
+  <div class="container">
+    <div class="row align-center copyright">
+      <div class="col-sm-12">
+        <p>Copyright &copy; Amoeba</p>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/fancybox/jquery.fancybox.pack.js"></script>
+<script src="js/skrollr.min.js"></script>
+<script src="js/jquery.scrollTo.js"></script>
+<script src="js/jquery.localScroll.js"></script>
+<script src="js/stellar.js"></script>
+<script src="js/jquery.appear.js"></script>
+<script src="js/main.js"></script>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="js/decisionTree.js"></script>
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script>
+    w3IncludeHTML();
+</script>
+</body>
+
+<script>
+window.onload = function(){
+  $('.nav a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })  
+  var result = $('.navbar-nav a');
+  result.toArray().forEach((e) => {
+    e.addEventListener("click", function (e) {
+      var href = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(href).offset().top
+        }, 'slow');
+        e.preventDefault();
+        e.stopImmediatePropagation();
+    });
+  });
+};
+</script>
+
+</html>
