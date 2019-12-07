@@ -250,16 +250,16 @@ slider1.oninput = function () {
 };
 var slider2 = document.getElementById("unval");
 var output2 = document.getElementById("val2");
-output2.innerHTML = slider2.value;
+output2.innerHTML = slider2.value.toString() + "%";
 
 slider2.oninput = function () {
-    output2.innerHTML = this.value;
+    output2.innerHTML = this.value.toString() + "%";
 };
 var slider3 = document.getElementById("crimeval");
 var output3 = document.getElementById("val1");
 output3.innerHTML = slider3.value;
 
 slider3.oninput = function () {
-        output3.innerHTML = this.value;
-    };
+    output3.innerHTML = this.value;
+};
 
