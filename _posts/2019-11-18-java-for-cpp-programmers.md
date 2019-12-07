@@ -60,8 +60,10 @@ which returns 120. Note: NO `.class` extension is needed.
 Execution environment:
 
 - C/C++: high-level programming language ----compile---> platform-specific machine language
-- Java: high-level programming language ---compile---> platform-independent language *bytecode*
+- Java: high-level programming language ---compile---> platform-independent language *bytecode*, contained in `.class` files
 - Bytecode is designed to be run by a *Java Virtual Machine* (JVM), an interpreter that translates bytecode into machine language and can be installed on different platforms
+
+Language syntax is very similar to C/C++, but note their differences as follows.
 
 Primitive data types
 
@@ -69,9 +71,9 @@ Primitive data types
 
 - int: always signed int in Java, four types (byte, short, int, long)
 
-- float: two types (float and double), literals are double
+- float: two types (float and double), literals are double by default
 
-- boolean: only takes value of true or false, NO numerical types are allowed
+- boolean: only takes value of `true` or `false`, NO numerical types are allowed
 
 - operator: + in Java can concatenate (literal or converted) strings; NO operator overload is allowed unlike C++
 
@@ -89,7 +91,7 @@ Other differences:
 
 - Java has NO pointers, only object references. NO pointer arithmetic, no conversion to primitive types, no address/dereferencing operators (as & and * in C), no need for memory management
 - NO global variables in Java
-- NO struct, union, typedef, enum as in C
+- NO struct, union, typedef as in C
 - Methods: i.e. functions in C, MUST be defined inside a class, can be invoked before declaration
 - The main() method MUST be declared as follows: argc can be determined by args.length
 
@@ -99,7 +101,7 @@ public static void main(String[] args)
 
 - private and public are modifiers but not labels in Java; constructor should be used with new operator
 
-## Java Classes
+## Java classes
 
 An example: `Account.java`
 
@@ -258,3 +260,12 @@ class SavingsAccount implements Account {
 
 Inner classes and inner interfaces: classes defined in a class & interfaces defined in an interface
 
+## Other features
+
+Exceptions, Assertions, I/O
+
+packages and imports
+
+New in Java 5: generics, enhanced loop, enums, varargs, annotations, autoboxing
+
+New in Java 8: lambda expressions, pipelines and streams
