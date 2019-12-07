@@ -963,7 +963,7 @@ Media queries
 }
 
 .node text {
-	font: 10px sans-serif;
+	font: 18px sans-serif;
 }
 
 .link {
@@ -971,9 +971,6 @@ Media queries
 	stroke: #ccc;
 	stroke-width: 1.5px;
 }
-/*#decisionTree svg{*/
-	/*margin-top: -50px*/
-/*}*/
 #importance img{
 	width: 500px;
 	height: 450px;
@@ -982,3 +979,26 @@ Media queries
 	width: 900px;
 	height: 800px;
 }
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+
+

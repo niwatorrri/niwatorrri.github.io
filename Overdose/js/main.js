@@ -123,18 +123,6 @@
 
 })(jQuery);
 
-// function ShowImage(page, tag)
-// {
-//     var i = 1;
-//     var el;
-//     while (el = document.getElementById(tag + i)) {
-//         if (i == page)
-//             el.style.display = 'block';
-//         else
-//             el.style.display = 'none';
-//         i++;
-//     }
-// }
 function ShowImage(page, tag)
 {
     var i = 1;
@@ -148,3 +136,130 @@ function ShowImage(page, tag)
         i++;
     }
 }
+function showresult() {
+    var crime = parseFloat(document.getElementById("crimeval").value);
+    var unemployment = parseFloat(document.getElementById("unval").value);
+    var income = parseFloat(document.getElementById("income").value);
+    var res = null;
+    // low 0 medium 1 high 2 extreme 3
+    if (crime > 0.005) {
+        if (unemployment > 4.608) {
+            if(unemployment > 4.992){
+                if (crime > 0.005) {
+                    if (income > 56591.5) {
+                        res = 1;
+                    }else {
+                        res = 2
+                    }
+                }else {
+                    if (income > 51898) {
+                        res = 2;
+                    }else {
+                        res = 1;
+                    }
+                }
+            }else{
+                res = 2;
+            }
+        } else {
+            if(income > 55123){
+                res = 3;
+            } else{
+                if (crime > 0.006) {
+                    res = 3;
+                }else {
+                    if (crime > 0.005) {
+                        res = 1;
+                    }else {
+                        res = 2;
+                    }
+                }
+            }
+        }
+    } else {
+        if (income > 66326) {
+            if (crime > 0.002){
+                if (crime > 0.002) {
+                    if (crime > 0.003) {
+                        res = 3;
+                    }else {
+                        res = 1;
+                    }
+                } else {
+                    if (income > 69853.5) {
+                        res = 2;
+                    }else {
+                        res = 1;
+                    }
+                }
+            } else{
+                if (unemployment > 5.435) {
+                    res = 2;
+                } else {
+                    if (income > 72145) {
+                        res = 3;
+                    }else {
+                        res = 1;
+                    }
+                }
+            }
+        } else {
+            if (unemployment > 4.196) {
+                if (crime > 0.003) {
+                    if (income > 55281) {
+                        res = 0;
+                    } else {
+                        res = 1;
+                    }
+                } else {
+                    if (income > 44460.5) {
+                        res = 2;
+                    } else {
+                        res = 0;
+                    }
+                }
+            } else {
+                if (crime > 0.002) {
+                    if (unemployment > 3.865) {
+                        res = 0;
+                    } else {
+                        res = 0;
+                    }
+                } else {
+                    if (income > 57333.5) {
+                        res = 2;
+                    } else {
+                        res = 1;
+                    }
+                }
+            }
+        }
+
+    }
+    imgsrc = "img/featured/res_".concat(res.toString(), ".jpg" );
+    document.getElementById("predictimg").src = imgsrc;
+    return res;
+}
+
+var slider1 = document.getElementById("income");
+var output1 = document.getElementById("val3");
+output1.innerHTML = slider1.value;
+
+slider1.oninput = function () {
+    output1.innerHTML = this.value;
+};
+var slider2 = document.getElementById("unval");
+var output2 = document.getElementById("val2");
+output2.innerHTML = slider2.value;
+
+slider2.oninput = function () {
+    output2.innerHTML = this.value;
+};
+var slider3 = document.getElementById("crimeval");
+var output3 = document.getElementById("val1");
+output3.innerHTML = slider3.value;
+
+slider3.oninput = function () {
+        output3.innerHTML = this.value;
+    };
+

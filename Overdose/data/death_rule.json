@@ -2,10 +2,10 @@
   "name": "Crime rate > 0.005?",
   "children": [
     {
-      "name": "Unemployment rate > 4.608?",
+      "name": "Unemployment rate > 4.608%?",
       "children": [
         {
-          "name": "Unemployment rate > 4.992?",
+          "name": "Unemployment rate > 4.992%?",
           "children": [
             {
               "name": "Crime rate > 0.005?",
@@ -102,7 +102,7 @@
               ]
             },
             {
-              "name": "Unemployment rate > 5.435?",
+              "name": "Unemployment rate > 5.435%?",
               "children": [
                 {
                   "name": "Predict: High overdose level"
@@ -123,7 +123,7 @@
           ]
         },
         {
-          "name": "Unemployment rate > 4.196?",
+          "name": "Unemployment rate > 4.196%?",
           "children": [
             {
               "name": "Crime rate > 0.003?",
@@ -156,7 +156,7 @@
               "name": "Crime rate > 0.002?",
               "children": [
                 {
-                  "name": "Unemployment rate > 3.865?",
+                  "name": "Unemployment rate > 3.865%?",
                   "children": [
                     {
                       "name": "Predict: Low overdose level"
