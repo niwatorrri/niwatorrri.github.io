@@ -142,4 +142,4 @@ Some ideas for organizing this article are borrowed from AAAI 2019 Explainable A
 
 [19] Mohseni, S., Zarei, N., & Ragan, E. D. (2018). A survey of evaluation methods and measures for interpretable machine learning. *arXiv preprint arXiv:1811.11839*.
 
-[20] Costabello, L., Giannotti, F., Guidotti, R., Hitzler, P., Lécué, F., Minervini, P., & Sarker, K. (2019). On explainable AI: from theory to motivation, applications and limitations. *Tutorial in**AAAI Conference on Artificial Intelligence.* <https://xaitutorial2019.github.io/>.
+[20] Costabello, L., Giannotti, F., Guidotti, R., Hitzler, P., Lécué, F., Minervini, P., & Sarker, K. (2019). On explainable AI: from theory to motivation, applications and limitations. *Tutorial in AAAI Conference on Artificial Intelligence.* <https://xaitutorial2019.github.io/>.
