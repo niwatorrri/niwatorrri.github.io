@@ -6,6 +6,7 @@ header-style: text
 comments: true
 tags: 
 - Computer Science
+- Machine Learning
 ---
 
 Artificial intelligence (AI) and especially machine learning (ML) has seen rapid progress and wide applications in every possible aspect of people’s lives, ranging from movie recommendation and smart home voice assistants such as Amazon Alexa, to mortgage qualification and yet experimental self-driving cars. More and more people are enjoying a higher quality of life thanks to the incredible development of AI technologies in recent years.
@@ -32,7 +33,7 @@ Besides comprehensibility and fidelity, another desired property for an explanat
 
 **Is this interpretation good for me?** Evaluation of an explanation is not an easy task. There is often neither directly measurable quantities nor established benchmarks for interpretability. Human evaluation has been essential in determining the quality of an explanation, which often includes criteria on simplicity, usefulness, coherence with prior belief, and generalizability [5]. This seems to work as a golden rule: to seek suggestions for improvement on explanations directly from the target users.
 
-Herman in his work [6], however, argues that we should be wary of using merely human evaluations because humans have a strong bias towards simpler explanations. Instead of a *descriptive*explanation, they might be reduced to *persuasive* ones which incorporate user preferences and characteristics to appear convincing to the users. This raises another dilemma where it can become unethical to tweak the explanation to be less faithful to AI models but more powerful to increase user trust. We will discuss this further in the final section of this article.
+Herman in his work [6], however, argues that we should be wary of using merely human evaluations because humans have a strong bias towards simpler explanations. Instead of a *descriptive* explanation, they might be reduced to *persuasive* ones which incorporate user preferences and characteristics to appear convincing to the users. This raises another dilemma where it can become unethical to tweak the explanation to be less faithful to AI models but more powerful to increase user trust. We will discuss this further in the final section of this article.
 
 ## Methods for interpretation
 
