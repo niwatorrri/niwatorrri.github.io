@@ -28,7 +28,7 @@ The efficiency in my case was incredible. They contacted me to schedule two tech
 
 ### 10.8 Time scheduled & Prepare for interviews
 
-Pretty quick, they scheduled my interviews on 10.14, about one week from when I started preparation. The interviews were two rounds in a row, both 45 minutes on phone. Google has offered a lot of advice and resources to help the candidates to prepare. Probably this part (and the next part) is what most people are interested in, so I should expand a little bit.
+Pretty quick, they scheduled my interviews on 10.14, about one week from when I started preparation. The interviews were two rounds in a row, both 45 minutes on phone. Google has offered a lot of advice and resources to help the candidates to prepare. Probably this part is what most people are interested in, so I should expand a little bit.
 
 #### Hard skills: data structure and algorithms
 
@@ -73,13 +73,13 @@ Before the actual interview, you will be asked to complete a project preference 
 
 So this is the day, I thought. My interviews were arranged at 5pm and 6pm EST. And yeah, I was freaking nervous before the interviews. I bought a bottle of water, found a quiet place, and waited for the calls.
 
-Well the interviews went pretty well. The first interviewer asked some questions about my resume, for about 8 minutes, and then went on to coding problems. The second interviewer directly jumped into coding. I guess that "ask about resume" part is only for us to relax. Anyway, my coding problems were not hard, a little above LeetCode easy or so. I can't tell the problems, but they were really easy in terms of hard skills, and so I asked a lot of questions to show my soft skills. For the very last several minutes, the interviewer would typically stop and see if you have any questions for them. Prepare one or two of them to show your care for the company, e.g. "what are the most difficult challenges you have faced in your work at Google?" The whole interview was like a chat with a friend, and it was a really good experience. I was pretty satisfied with my performance, and went to dinner with joy.
+Well the interviews went pretty well. The first interviewer asked some questions about my resume, for about 8 minutes, and then went on to coding problems. The second interviewer directly jumped into coding. I guess that "ask about resume" part is only for us to relax. Anyway, my coding problems were not hard, a little above LeetCode easy or so. I can't tell you the problems, but they were really easy in terms of hard skills, and so I asked a lot of questions to show my soft skills. For the very last several minutes, the interviewer would typically stop and see if you have any questions for them. Prepare one or two of them to show your care for the company, e.g. "what are the most difficult challenges you have faced in your work at Google?" The whole interview was like a chat with a friend, and it was a really good experience. I was pretty satisfied with my performance, and went to dinner with joy.
 
 ### 10.17 Coding interviews passed
 
 Three days later, I was notified the hiring committee (HC) had approved my application. This means I entered the next phase, the host-matching phase. During this phase, project hosts who are interested in having you as an intern will reach out to you, to have a chat, and to see if you are interested in their project as well. Note that normally this process can by no means be expedited, and there is now no guarantee that you will be contacted by at least one host. So this phase is kind of a bummer, and also the part I hated the most about the whole recruitment process. You never know when your first potential host will call in, and it could take more than a month if you are really unlucky, or even drown in the intern pool. But it should be not a problem if you entered this phase early enough.
 
-There could be one exception though: if you have other offers that urgently need your decision, you can tell your recruiter about this and they might speed up the process and arrange you to even several host interviews in a day.
+There could be one exception though: if you have other offers that urgently need your decision, you can tell your recruiter about this and they *might* speed up the process and arrange you to even several host interviews in a day.
 
 ### 10.30 First host matching notification
 
@@ -97,9 +97,9 @@ I didn't hear from the first host for a while, but a second host reached out to 
 
 ### 11.13 Second host matching interview & Two interview results
 
-Same process as before, but I felt like this host was less enthusiastic than the first one. Out of courtesy, I still asked them about the details of the project. In the afternoon after I finished the second interview, my recruiter seemed very eager to contact me: they even called me on the phone. I was in a class and so I texted them I would be able to talk an hour later.
+Same process as before, but I felt like this host was less enthusiastic than the first one. Out of courtesy, I still asked them about the details of the project. In the afternoon after I finished the second interview, my recruiter seemed very eager to contact me: they even called me directly on the phone instead of sending emails! I was in a class, so I texted them I would be able to talk an hour later.
 
-Well, guess what, it's great news! My recruiter told me that two hosts both wanted to move forward with me, and I'm facing three decisions: a) choose the first host; b) choose the second host; and c) wait for a third host and decide. I was so overwhelmed --- finally I got to have an offer! I just couldn't make a reasonable decision at that time, so I promised I would reply the next day. They agreed, saying they are happy for me but cannot provide any suggestion on my decision. I thanked them and kind of drowned in this sudden crush of excitement and ecstasy.
+Well, guess what, it's great news! My recruiter told me that two hosts both wanted to move forward with me, and I'm facing three decisions: a) choose the first host; b) choose the second host; and c) wait for a third host and decide. I was so overwhelmed --- finally I got to have an offer! I just couldn't make a reasonable decision at that time, so I promised I would reply the next day. They agreed, saying they are happy for me but cannot provide any suggestion on my decision. I thanked them and drowned in this sudden crush of excitement and ecstasy.
 
 ### 11.14 Reply decision
 
