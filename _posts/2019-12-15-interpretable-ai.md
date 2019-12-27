@@ -79,7 +79,9 @@ Personal beliefs and cognitive bias can actually persist or amplify through expl
 
 Source: reference [4]
 
-Finally, we shall discuss another ethical issue underlying these interpretations. The call for an explainable and transparent AI system can have conflicts with some stakeholders’ interests, for example a reluctance for a company to disclose their business secrets. Therefore, such conflicts might result in an explanation that does not actually benefit the users and can turn into *dark patterns* that “purposefully deceive users for the benefit of other parties [18].” Such patterns are not hard to implement as there are many scenarios where users’ perception can be vulnerable when the explanation is deliberately equipped with subtle and sneaky tricks. *Persuasive* explanations are also facing the same issue, where the explanation can be intentionally tuned to increase user trust but does not reflect the actual AI model as accurate as it should. The boundaries of ethics can be blurry. Are we looking for an act utilitarian solution, or a rule utilitarian solution? Awareness of existence of these practices should be promoted, and a fair talk among all the stakeholders is needed so as to provide users with interpretations in a healthy and ethical way. 
+Finally, we shall discuss another ethical issue underlying these interpretations. The call for an explainable and transparent AI system can have conflicts with some stakeholders’ interests, for example a reluctance for a company to disclose their business secrets. Therefore, such conflicts might result in an explanation that does not actually benefit the users and can turn into *dark patterns* that “purposefully deceive users for the benefit of other parties [18].” Such patterns are not hard to implement as there are many scenarios where users’ perception can be vulnerable when the explanation is deliberately equipped with subtle and sneaky tricks.
+
+*Persuasive* explanations are also facing the same issue, where the explanation can be intentionally tuned to increase user trust but does not reflect the actual AI model as accurate as it should. The boundaries of ethics can be blurry. Are we looking for an act utilitarian solution, or a rule utilitarian solution? Awareness of existence of these practices should be promoted, and a fair talk among all the stakeholders is needed so as to provide users with interpretations in a healthy and ethical way. 
 
 ## Conclusion
 
@@ -127,7 +129,7 @@ Some ideas for organizing this article are borrowed from AAAI 2019 Explainable A
 
 [11] Zilke, J. R., Mencía, E. L., & Janssen, F. (2016, October). DeepRED–Rule extraction from deep neural networks. In *International Conference on Discovery Science* (pp. 457-473). Springer, Cham.
 
-[12]Zeiler, M. D., & Fergus, R. (2014, September). Visualizing and understanding convolutional networks. In *European conference on computer vision* (pp. 818-833). Springer, Cham.
+[12] Zeiler, M. D., & Fergus, R. (2014, September). Visualizing and understanding convolutional networks. In *European conference on computer vision* (pp. 818-833). Springer, Cham.
 
 [13] Hendricks, L. A., Akata, Z., Rohrbach, M., Donahue, J., Schiele, B., & Darrell, T. (2016, October). Generating visual explanations. In *European conference on computer vision* (pp. 3-19). Springer, Cham.
 
