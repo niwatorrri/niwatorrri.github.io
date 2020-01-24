@@ -99,7 +99,8 @@ Other differences:
 public static void main(String[] args)
 ```
 
-- private and public are modifiers but not labels in Java; constructor should be used with new operator
+- Private and public are modifiers but not labels in Java; Constructor should be used with new operator
+- Enhanced loop: `for (int x: nums) do(x);` is a shorthand for `for (int i = 0; i < nums.length; ++i) do(nums[i]);`.
 
 ## Java classes
 
@@ -260,12 +261,14 @@ class SavingsAccount implements Account {
 
 Inner classes and inner interfaces: classes defined in a class & interfaces defined in an interface
 
+## Input and Output
+
+## Packages and Imports
+
+## Exceptions and Assertions
+
 ## Other features
 
-Exceptions, Assertions, I/O
-
-packages and imports
-
-New in Java 5: generics, enhanced loop, enums, varargs, annotations, autoboxing
+New in Java 5: generics, enums, varargs, annotations, autoboxing
 
 New in Java 8: lambda expressions, pipelines and streams
