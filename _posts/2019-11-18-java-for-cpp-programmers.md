@@ -313,12 +313,12 @@ Lambda expression is Java's first step into functional programming. It is based 
 Using anonymous classes to specify an event handler:
 
 ```java
-		button.setOnAction(new EventHandler() {
-        @Override
-        public void handle(ActionEvent event) {
-            System.out.println("Hello World!");
-        }
-    });
+button.setOnAction(new EventHandler() {
+    @Override
+    public void handle(ActionEvent event) {
+        System.out.println("Hello World!");
+    }
+});
 ```
 
 The `button.setOnAction` method requires an object of type `EventHandler`. The `EventHandler` is an interface with only one method.
@@ -333,9 +333,9 @@ interface EventHandler {
 This interface is a functional interface, as suggested by the annotation. And thus you could use the following lambda expression to replace it:
 
 ```java
-    button.setOnAction(
-      	event -> System.out.println("Hello World!")
-    );
+button.setOnAction(
+    event -> System.out.println("Hello World!")
+);
 ```
 
 ## Generics
@@ -384,7 +384,7 @@ public class Pair<K, V> {
     public K getKey()   { return key; }
     public V getValue() { return value; }
 
-  	public static void main(String[] args) {
+    public static void main(String[] args) {
         // The complete syntax for invoking Util.compare would be:
         Pair<Integer, String> p1 = new Pair<>(1, "apple");
         Pair<Integer, String> p2 = new Pair<>(2, "pear");
@@ -523,15 +523,16 @@ public class FindDups {
 }
 ```
 
-- List\<T\> implementations: LinkedList and ArrayList
+- List\<T\> implementations: `LinkedList` and `ArrayList`
   - Methods: size, isEmpty, add, remove, get, set, etc.
-- Map\<K, V\> implementations: HashMap, TreeMap and LinkedHashMap
+- Map\<K, V\> implementations: `HashMap`, `TreeMap` and `LinkedHashMap`
   - Methods: size, isEmpty, put, putIfAbsent, get, getOrDefault, remove(K), remove(K, V), replace(K, newV), replace(K, oldV, newV), etc.
 
 Common misunderstanding
 
 - Although Integer is a subclass of Number, List\<Integer\> is NOT a subclass of List\<Number\>!
 - Generally, `MyClass<A>` has no relationship with `MyClass<B>`, regardless of whether or not `A` and `B` are related
+- Solution: wildcards
 
 Wildcards (?): represents an unknown type
 
