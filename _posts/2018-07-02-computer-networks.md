@@ -5,7 +5,7 @@ subtitle: "Computer Networking: A Top-Down Approach (6th Edition)"
 author: "Tori"
 header-style: text
 tags:
-- Computer science
+- Computer Science
 ---
 
 - TOC
