@@ -192,7 +192,7 @@ public class CheckingAccount extends Account {
   
   @Override	// annotation
   public void withdraw(double amount) {
-    balancer -= amount;
+    balance -= amount;
   }
 }
 ```
@@ -273,32 +273,22 @@ Anonymous classes enable you to declare and instantiate a class at the same time
 public class HelloWorldAnonymousClasses {
     interface HelloWorld { // or any other class
         public void greet();
-        public void greetSomeone(String someone);
     }
   
     public void sayHello() {
         // not using anonymous class
         class EnglishGreeting implements HelloWorld {
-            String name = "world";
             public void greet() {
-                greetSomeone("world");
-            }
-            public void greetSomeone(String someone) {
-                name = someone;
-                System.out.println("Hello " + name);
+                System.out.println("Hello world!");
             }
         }
         HelloWorld englishGreeting = new EnglishGreeting();
+        englishGreeting.greet();
         
         // using anonymous class
         HelloWorld spanishGreeting = new HelloWorld() {
-            String name = "mundo";
             public void greet() {
-                greetSomeone("mundo");
-            }
-            public void greetSomeone(String someone) {
-                name = someone;
-                System.out.println("Hola, " + name);
+                System.out.println("Hola, mundo!");
             }
         };
         spanishGreeting.greet();
