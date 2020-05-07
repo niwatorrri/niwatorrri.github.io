@@ -8,9 +8,7 @@ tags:
 - Essay
 ---
 
-# A Trip in California
-
-> Too lazy to finish this
+> Didn't have time to write in detail
 >
 > Also too lazy to post photos
 
@@ -36,7 +34,7 @@ Day 1: Santa Monica Beach -> Subset Blvd -> Hollywood
 Day 2: Universal Studios Theme Park -> Griffith Observatory
 
 - Universal Studios is a place for entertainment! The attractions are fairly well-designed. Just have fun! My mom was really fond of the butterbeer served there :)
-- It's best to head to Griffith around sunset where you can see the sign of Hollywood on the mountain, and stay till the night to take some night sceneries of the whole LA. Parking is a headache.
+- It's best to head to Griffith Observatory around sunset where you can see the sign of Hollywood on the mountain, and stay till the night to take some night sceneries of the whole LA. Parking is a headache.
 
 Day 3: Citadel Outlets -> Santa Barbara
 
@@ -56,10 +54,10 @@ Day 3: Citadel Outlets -> Santa Barbara
 
 This is definitely the MOST fascinating part of the California State Route 1.
 
-- Hearst Castle: built by William Hearst the publishing tycoon. The life of the rich, wow.
+- Hearst Castle was: built by William Hearst the publishing tycoon. The life of the rich, wow.
 - Elephant seal vista point: Lots of seals, with squirrels and such. Real fun!
 - **Big Sur**: This is a looong run and the scenery along the way is far beyond what my words can tell. It is so breath-taking. You drive along, with sea on the one side and mountain on the other side. That's such an amazing experience, and you embrace, you breathe, you immerse yourself, into this spellbinding nature. There are many parking spots along the way so you can oftentimes park aside, enjoy, and take some pictures for future treasures. I should put some pictures here. Some named attractions include McWay Falls, Pfeiffer Beach (this is wonderful for photographers!), and Bixby Creek Bridge. But you will definitely receive more other than these!
-- Carmel-by-the-sea: an artistic little town. Very elegant architecture, very elegant food, but it's also very expensive :x
+- Carmel-by-the-sea is an artistic little town. Very elegant architecture, very elegant food, but it's also very expensive :x
 
 
 
@@ -74,7 +72,7 @@ This is definitely the MOST fascinating part of the California State Route 1.
 **Day 7: San Francisco**
 
 - First of all, the roads in SF are insane... It's like 45 degrees uphill and then downhill. My mom was just too scared to drive and let me do all of it.
-- Fisherman’s Wharf: really nice seafood. We had a huge crab and stuff and it was awesome! (For about 40 dollars IIRC)
+- Fisherman’s Wharf has got really nice seafood! We had a huge crab and stuff and it was awesome! (For about 40 dollars IIRC)
 - Golden Gate Bridge: you know, a must for travelers
 - Chinatown/Union Square: not much to say, we just drove through
-- Return our car and that's it. Bye!
+- Return our car and that's it. Bye! Looking forward to another tour!
