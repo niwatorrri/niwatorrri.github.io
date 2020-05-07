@@ -46,7 +46,7 @@ Day 3: Citadel Outlets -> Santa Barbara
 
 - Solvang is small town featuring its Danish-style architecture. Kind of dreamy walking around.
 - Pismo beach. Yes, beach again, and it's another feeling of the beach, and you'll never get bored of it.
-- We stayed at a very nice airbnb at San Luis Obispo, plus the host is very friendly. Just a note for future reminder :)
+- A lady helped us out at the gas station when we were having trouble paying for the gas fees. Didn't take down her name so I'm saying thank you here. Also we stayed at a very nice airbnb at San Luis Obispo, and the host is very friendly---also thank you for the nice place!
 
 
 
@@ -54,9 +54,9 @@ Day 3: Citadel Outlets -> Santa Barbara
 
 This is definitely the MOST fascinating part of the California State Route 1.
 
-- Hearst Castle was: built by William Hearst the publishing tycoon. The life of the rich, wow.
+- Hearst Castle was built by William Hearst the publishing tycoon. The life of the rich, wow.
 - Elephant seal vista point: Lots of seals, with squirrels and such. Real fun!
-- **Big Sur**: This is a looong run and the scenery along the way is far beyond what my words can tell. It is so breath-taking. You drive along, with sea on the one side and mountain on the other side. That's such an amazing experience, and you embrace, you breathe, you immerse yourself, into this spellbinding nature. There are many parking spots along the way so you can oftentimes park aside, enjoy, and take some pictures for future treasures. I should put some pictures here. Some named attractions include McWay Falls, Pfeiffer Beach (this is wonderful for photographers!), and Bixby Creek Bridge. But you will definitely receive more other than these!
+- **Big Sur**: This is a looong run and the scenery along the way is far beyond what my words can describe. It is so breath-taking. You drive along, with sea on the one side and mountain on the other side. That's such an amazing experience, and you embrace, you breathe, you immerse yourself, into this spellbinding nature. There are many parking spots along the way so you can oftentimes park aside, enjoy, and take some pictures for future treasures. I should put some pictures here. Some named attractions include McWay Falls, Pfeiffer Beach (this is wonderful for photographers!), and Bixby Creek Bridge. But you will definitely receive more other than these!
 - Carmel-by-the-sea is an artistic little town. Very elegant architecture, very elegant food, but it's also very expensive :x
 
 
