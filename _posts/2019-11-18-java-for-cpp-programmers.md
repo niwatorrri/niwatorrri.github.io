@@ -13,7 +13,7 @@ Reference: <https://www.seas.upenn.edu/~cis1xx/resources/JavaForCppProgrammers/j
 - TOC
 {:toc}
 
-## Compile and run: a simple example
+## Compile and Run: an Example
 
 Assume we have a `Factorial.java` file that returns the factorial of a given non-negative integer:
 
@@ -55,7 +55,7 @@ java Factorial 5
 
 which returns 120. Note: NO `.class` extension is needed.
 
-## The Java language
+## The Java Language
 
 Execution environment:
 
@@ -104,7 +104,7 @@ public static void main(String[] args)
 - Enhanced loop: `for (int x: nums) do(x);` is a shorthand for `for (int i = 0; i < nums.length; ++i) do(nums[i]);`
 - Java supports variable length of method arguments by using `...`, e.g. `void sayWords(String... words)`, where `words` is inherently of type `String[]`
 
-## Java classes
+## Java Classes
 
 An example: `Account.java`
 
@@ -203,7 +203,7 @@ The `Object` class
 - It has methods, e.g. `toString()` that can be overridden
 - Can define structures that take objects of class `Object`, similar to C++ templates
 
-### Abstract classes and Interfaces
+### Abstract Classes and Interfaces
 
 Abstract class: using `abstract` modifier
 
@@ -265,7 +265,7 @@ class SavingsAccount implements Account {
 }
 ```
 
-### Anonymous classes
+### Anonymous Classes
 
 Anonymous classes enable you to declare and instantiate a class at the same time. Use them if you need to use a local class only once.
 
@@ -296,7 +296,7 @@ public class HelloWorldAnonymousClasses {
 }
 ```
 
-### Lambda expressions
+### Lambda Expressions
 
 Lambda expression is Java's first step into functional programming. It is based on a special type of interface called functional interface.
 
@@ -348,7 +348,7 @@ public class Box<T> {
 ```
 
 - Multiple type parameters: `public class OrderedPair<K, V> implements Pair<K, V> {...}`
-- AVOID using raw types: `Box rawBox = new Box<Integer>()`
+- AVOID using raw types: `Box rawBox = new Box<Integer>(); // DON'T DO THIS!`
 
 Generic methods
 
@@ -392,6 +392,35 @@ Bounded type parameters
 - Solution: `public <T extends Number> method(T t);`
 - A type parameter can have multiple bounds: `<T extends B1 & B2 & B3>`. T should be a subtype of all the types listed. If one of the bounds is a class, it must be specified first. 
 
+Caveats
+
+- To implement generics, the Java compiler applies type erasure to replace all type parameters with their bounds or `Object` if the type parameters are unbounded. The produced bytecode thus contains only ordinary classes, interfaces, and methods. And therefore:
+- You cannot declare static fields whose type are type parameters while this is allowed in C++ templates
+
+```java
+public class MobileDevice<T> {
+    private static T os; // compile error
+}
+```
+
+- You cannot use casts or `instanceof` with parameterized types
+
+```java
+public static <E> void rtti(List<E> list) {
+    if (list instanceof ArrayList<Integer>) {  // compile error
+    }
+}
+```
+
+- A class cannot have two overloaded methods that will have the same signature after type erasure.
+
+```java
+public class Example {
+    public void print(Set<String> strSet) { }
+    public void print(Set<Integer> intSet) { } // compile error
+}
+```
+
 ## Essential Packages
 
 ### Exceptions
@@ -421,10 +450,9 @@ public void writeList() {
             out.println("Value at: " + i + " = " + list.get(i));
         }
     } catch (IndexOutOfBoundsException e) {
-        System.err.println("Caught IndexOutOfBoundsException: "
-                           +  e.getMessage());
+        System.err.println("Caught IndexOutOfBoundsException: " + e.getMessage());
     } catch (IOException e) {
-        System.err.println("Caught IOException: " +  e.getMessage());
+        System.err.println("Caught IOException: " + e.getMessage());
     } finally {
         if (out != null) {
             System.out.println("Closing PrintWriter");
@@ -496,7 +524,7 @@ public class Root2 {
 
 ### Collections
 
-A collection represents a group of objects known as its elements. Its sub-interfaces include Set, List, Queue, Deque, Map, SortedSet and SortedMap. All can be imported from `java.util.*`.
+A collection represents a group of objects known as its elements. Its sub-interfaces include Set, List, Queue, Deque, Map, SortedSet and SortedMap. All can be imported from `java.util.*`. Similar to C++ STL.
 
 - Set\<T\> implementations: `HashSet`, `TreeSet`, and `LinkedHashSet`
   - Methods: size, isEmpty, add, remove, contains, addAll, removeAll, etc.
@@ -517,10 +545,13 @@ public class FindDups {
   - Methods: size, isEmpty, add, remove, get, set, etc.
 - Map\<K, V\> implementations: `HashMap`, `TreeMap` and `LinkedHashMap`
   - Methods: size, isEmpty, put, putIfAbsent, get, getOrDefault, remove(K), remove(K, V), replace(K, newV), replace(K, oldV, newV), etc.
+- Queue\<T\> implementation: `PriorityQueue`
+  - Methods: size, add, peek, poll, etc.
+- Note: many of these implementation are not thread-safe. There are thread-safe counterparts if you need to use them.
 
 Common misunderstanding
 
-- Although Integer is a subclass of Number, List\<Integer\> is NOT a subclass of List\<Number\>!
+- Although Integer is a subclass of Number, List\<Integer\> is NOT a subclass of List\<Number\>! That means you cannot pass `List<Integer>` to a method that takes `List<Number>` as a parameter.
 - Generally, `MyClass<A>` has no relationship with `MyClass<B>`, regardless of whether or not `A` and `B` are related
 - Solution: wildcards
 
@@ -533,3 +564,80 @@ Wildcards (?): represents an unknown type
   - If you are *only* pulling items from a generic collection, it is a producer and you should use `extends`
   - If you are *only* stuffing items in, it is a consumer and you should use `super`
   - If you do both with the same collection, you should use neither
+
+### Pipelines and Streams
+
+This is also introduced in Java 8 along with lambda expressions. Assume a `Person` class as follows.
+
+```java
+public class Person {
+    public enum Sex { MALE, FEMALE }
+
+    String name;
+    LocalDate birthday;
+    Sex gender;
+    String emailAddress;
+
+    public int getAge() {...}
+    public String getName() {...}
+}
+```
+
+For a `Collection<Person> roster`, we can do:
+
+```java
+roster
+    .stream()
+    .filter(e -> e.getGender() == Person.Sex.MALE)
+    .forEach(e -> System.out.println(e.getName()));
+
+double average = roster
+    .stream()
+    .filter(p -> p.getGender() == Person.Sex.MALE)
+    .mapToInt(Person::getAge)
+    .average()
+    .getAsDouble();
+```
+
+The JDK contains many terminal operations (such as `average`, `sum`, `min`, `max`, and `count`) that return one value by combining the contents of a stream. These operations are called *reduction operations*. General-purpose reduction operations `reduce` and `collect` are also provided. Examples follow.
+
+Parallelism: call `Collection.parallelStream()` or `Collection.stream().parallel()`.
+
+```java
+Integer totalAgeReduce = roster
+   .stream()
+   .map(Person::getAge)
+   .reduce(0, (a, b) -> a + b);
+
+List<String> namesOfMaleMembersCollect = roster
+    .stream()
+    .filter(p -> p.getGender() == Person.Sex.MALE)
+    .map(p -> p.getName())
+    .collect(Collectors.toList());
+
+Map<Person.Sex, List<Person>> byGender =
+    roster
+        .stream()
+        .collect(
+            Collectors.groupingBy(Person::getGender));
+
+Map<Person.Sex, List<String>> namesByGender =
+    roster
+        .stream()
+        .collect(
+            Collectors.groupingBy(
+                Person::getGender,                      
+                Collectors.mapping(
+                    Person::getName,
+                    Collectors.toList())));
+
+Map<Person.Sex, Integer> totalAgeByGender =
+    roster
+        .stream()
+        .collect(
+            Collectors.groupingBy(
+                Person::getGender,                      
+                Collectors.reducing(
+                    0, Person::getAge,
+                    Integer::sum)));
+```
