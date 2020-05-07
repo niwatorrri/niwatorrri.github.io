@@ -1,7 +1,6 @@
 ---
 layout: post
-title: "加州游记"
-subtitle: "A trip in California"
+title: "A Trip in California"
 author: "Tori"
 header-style: text
 comments: true
@@ -9,51 +8,73 @@ tags:
 - Essay
 ---
 
-加州游记
+# A Trip in California
 
-Day 0: Shanghai -> Los Angeles
-
-12小时的飞机，穿拖鞋会舒服些。下飞机以后就入关、取行李、租车、休息。这里主要说些我知道的关于租车的事项
-
-
-
-Day 1-3: Los Angeles
-
-因为这次行程只有我和我妈两个人，所以行程速度前期一直比较缓慢，后期就稍微赶了一些。
-
-Santa Monica -> Subset Blvd -> Hollywood
-
-Universal Studios -> Griffith Observatory
-
-Citadel Outlets -> Santa Barbara
+> Too lazy to finish this
+>
+> Also too lazy to post photos
 
 
 
-Day 4: Santa Barbara -> Solvang -> Pismo Beach -> San Luis Obispo
+**Day 0: Shanghai -> Los Angeles**
 
-Solvang音译为索尔万，aka丹麦小镇
+12 hours of flight, really exhausting
 
-
-
-Day 5: San Luis Obispo -> Hearst Castle -> Elephant Seal Vista Point -> Big Sur -> Carmel-by-the-sea
-
-这一段是一号公路最为精彩的部分
-
-(McWay Falls -> Pfeiffer Beach -> Bixby Creek Bridge)
+Customs, baggage claim, car rental and have a good rest!
 
 
 
-Day 6: Carmel-by-the-sea -> 17 Mile Drive -> Monterey Bay Aquarium -> Santa Cruz Wharf -> San Francisco
+**Day 1-3: Los Angeles**
 
-蒙特雷湾水族馆
+Since it's only me and my mom guiding ourselves for the trip, we've been pretty staggering in the first several days.
+
+Day 1: Santa Monica Beach -> Subset Blvd -> Hollywood
+
+- The beach is very popular and you can enjoy the sun, the sand, the sea, and everything! Just chill!
+- Honestly, there's not much to say about Hollywood. It's more like a commercial place where you can simply hang around and that's it.
+
+Day 2: Universal Studios Theme Park -> Griffith Observatory
+
+- Universal Studios is a place for entertainment! The attractions are fairly well-designed. Just have fun! My mom was really fond of the butterbeer served there :)
+- It's best to head to Griffith around sunset where you can see the sign of Hollywood on the mountain, and stay till the night to take some night sceneries of the whole LA. Parking is a headache.
+
+Day 3: Citadel Outlets -> Santa Barbara
+
+- My mom wants shopping so yeah. After that we headed north.
 
 
 
-Day 7: San Francisco
+**Day 4: Santa Barbara -> Solvang -> Pismo Beach -> San Luis Obispo**
 
-Fisherman’s Wharf -> Golden Gate Bridge -> Chinatown/Union Square -> Rental car return -> Bye
+- Solvang is small town featuring its Danish-style architecture. Kind of dreamy walking around.
+- Pismo beach. Yes, beach again, and it's another feeling of the beach, and you'll never get bored of it.
+- We stayed at a very nice airbnb at San Luis Obispo, plus the host is very friendly. Just a note for future reminder :)
 
-旧金山真牛逼
 
-![1215-1](/img/in-post/1215-1.png)
 
+**Day 5: San Luis Obispo -> Hearst Castle -> Elephant Seal Vista Point -> Big Sur -> Carmel-by-the-sea**
+
+This is definitely the MOST fascinating part of the California State Route 1.
+
+- Hearst Castle: built by William Hearst the publishing tycoon. The life of the rich, wow.
+- Elephant seal vista point: Lots of seals, with squirrels and such. Real fun!
+- **Big Sur**: This is a looong run and the scenery along the way is far beyond what my words can tell. It is so breath-taking. You drive along, with sea on the one side and mountain on the other side. That's such an amazing experience, and you embrace, you breathe, you immerse yourself, into this spellbinding nature. There are many parking spots along the way so you can oftentimes park aside, enjoy, and take some pictures for future treasures. I should put some pictures here. Some named attractions include McWay Falls, Pfeiffer Beach (this is wonderful for photographers!), and Bixby Creek Bridge. But you will definitely receive more other than these!
+- Carmel-by-the-sea: an artistic little town. Very elegant architecture, very elegant food, but it's also very expensive :x
+
+
+
+**Day 6: Carmel-by-the-sea -> 17 Mile Drive -> Monterey Bay Aquarium -> Santa Cruz Wharf -> San Francisco**
+
+- 17 Mile Drive is a personal-owned coast. Yeah the life of the rich.
+- Monterey Bay Aquarium: Strongly recommended. The interactions, the living cuties and the immersive experiences are so attractive that you can literally spend a whole afternoon or a whole day in there.
+- Santa Cruz Wharf: an entertainment park is here if you have time!
+
+
+
+**Day 7: San Francisco**
+
+- First of all, the roads in SF are insane... It's like 45 degrees uphill and then downhill. My mom was just too scared to drive and let me do all of it.
+- Fisherman’s Wharf: really nice seafood. We had a huge crab and stuff and it was awesome! (For about 40 dollars IIRC)
+- Golden Gate Bridge: you know, a must for travelers
+- Chinatown/Union Square: not much to say, we just drove through
+- Return our car and that's it. Bye!
