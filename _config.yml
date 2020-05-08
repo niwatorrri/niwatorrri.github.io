@@ -3,8 +3,8 @@ title: Tori's MindPalace
 SEOTitle: Tori's MindPalace
 header-img: img/post-bg-os-metro.jpg
 email: niwatori@foxmail.com
-# description: "机器学习与认知科学"
-# keyword: "认知科学"
+# description: ""
+# keyword: ""
 # url: "https://"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -13,13 +13,12 @@ future: true
 
 # SNS settings
 RSS: false
-# weibo_username:     niwatori
+# weibo_username:
 zhihu_username:     niwatori1217
 github_username:    niwatorrri
-# twitter_username:   huxpro
-facebook_username:  niwatori1217
+# twitter_username:
+# facebook_username:  niwatori1217
 linkedin_username:  hongyi-zhang
-
 
 
 # Build settings
@@ -30,8 +29,7 @@ paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
 anchorjs: false                          # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
-timezone: CN
-
+# timezone: CN
 
 
 # Gems
@@ -39,7 +37,6 @@ timezone: CN
 # make sure you have this gem installed
 # `$ gem install jekyll-paginate`
 plugins: [jekyll-paginate]
-
 
 
 # Markdown settings
@@ -57,13 +54,11 @@ kramdown:
       start_line: 1
 
 
-
 # Disqus settings
 disqus_username: niwatorrri
 
 # Netease settings
 netease_comment: false
-
 
 
 # Analytics settings
@@ -75,12 +70,10 @@ ga_track_id: 'UA-132399441-1'            # Format: UA-xxxxxx-xx
 ga_domain: niwatori.io
 
 
-
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "A Data Science and Psychology Guy"
+sidebar-about-description: "Sometimes human,"
 sidebar-avatar: /img/avatar-tori.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
 
 
 # Featured Tags
@@ -88,16 +81,13 @@ featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
 
-
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
 service-worker: true
 
 
-
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: true
-
 
 
 # Friends
