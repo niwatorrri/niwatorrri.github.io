@@ -102,10 +102,13 @@ page-mathjax: true
 
 # Friends
 friends: [ {
-        title: "programmingLearner",
-        href: "http://programminglearner.github.io/"
-    },{
-        title: "Daryl",
-        href: "http://zjxs1997.github.io"
-    }
+    title: "programmingLearner",
+    href: "http://programminglearner.github.io/"
+  },{
+    title: "Daryl",
+    href: "http://zjxs1997.github.io/"
+  }, {
+    title: "Annette",
+    href: "http://ruslin-oir.github.io/"
+  }
 ]
