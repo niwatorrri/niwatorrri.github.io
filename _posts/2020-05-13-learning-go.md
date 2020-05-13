@@ -19,7 +19,7 @@ Go is syntactically similar to C, but with memory safety, garbage collection, st
 - Minimalism: easy to learn, read, write and maintain
 - Compatibility: succinct and strict compatibility guarantees
 - Performance: compiled language similar to C, optimized standard libraries, built-in concurrency primitives (lower latency and smaller overhead)
-- Development: auto documentation, embedded test environment, race condition detector, etc.
+- Development: automatic documentation, built-in frameworks for testing and profiling, clear code separation, race condition detector, etc.
 - OOP without classes, inheritance, constructors, generics, and others
 
 ## Go Basics
