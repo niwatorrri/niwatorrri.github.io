@@ -6,7 +6,7 @@ email: niwatori@foxmail.com
 # description: ""
 # keyword: ""
 # url: "https://"              # your host, for absolute URL
-baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: ""                    # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
 future: true
@@ -14,11 +14,11 @@ future: true
 # SNS settings
 RSS: false
 # weibo_username:
-zhihu_username:     niwatori1217
 github_username:    niwatorrri
 # twitter_username:
 # facebook_username:  niwatori1217
 linkedin_username:  hongyi-zhang
+zhihu_username:     niwatori1217
 
 
 # Build settings
