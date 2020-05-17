@@ -10,6 +10,7 @@ tags:
 
 - TOC
 {:toc}
+
 ## Why Go?
 
 Go is a statically typed, compiled programming language. It was designed at Google in 2007 to improve programming productivity in an era of multicore, networked machines and large codebases. The designers wanted to address criticism of other languages in use at Google, but keep their useful characteristics.
@@ -152,6 +153,8 @@ func main() {
 	fmt.Printf("Type: %T Value: %v\n", z, z)           // Type: complex128 Value: (2+3i)
 }
 ```
+
+In `fmt` package, the format string for printing is similar to C but greatly simplified. For example, `%v` presents the value in a default format, and `%T` presents a Go-syntax representation of the type of the value. See [Package fmt](https://golang.org/pkg/fmt/) for more information.
 
 Unlike in C, in Go assignment between items of different type requires an explicit conversion. The expression `T(v)` converts the value `v` to the type `T`. For example:
 
