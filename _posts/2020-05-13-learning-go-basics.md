@@ -169,9 +169,9 @@ Pointers: A pointer holds the memory address of a value. The type `*T` is a poin
 func main() {
   i := 42
 	p := &i         // point to i
-  fmt.Println(*p) // read i through the pointer: 42
+	fmt.Println(*p) // read i through the pointer: 42
 	*p = 21         // set i through the pointer
-  fmt.Println(i)  // see the new value of i: 21
+	fmt.Println(i)  // see the new value of i: 21
 }
 ```
 
@@ -338,7 +338,7 @@ func main() {
 	primes := [6]int{2, 3, 5, 7, 11, 13}
 	fmt.Println(primes) // [2 3 5 7 11 13]
   
-  var s []int = primes[:4]
+	var s []int = primes[:4]
 	fmt.Println(s) // [2 3 5 7]
 }
 ```
@@ -456,10 +456,7 @@ func adder() func(int) int {
 func main() {
 	pos, neg := adder(), adder()
 	for i := 0; i < 10; i++ {
-		fmt.Println(
-			pos(i),
-			neg(-2*i),
-		)
+		fmt.Println(pos(i), neg(-2*i))
 	}
 }
 ```
@@ -486,9 +483,9 @@ func (v *Vertex) Scale(f float64) {
 
 func main() {
 	v := Vertex{3, 4}
-  fmt.Println(v.Abs()) // 5
+	fmt.Println(v.Abs()) // 5
   
-  v.Scale(10)
+	v.Scale(10)
 	fmt.Println(v.Abs()) // 50
 }
 ```
@@ -562,8 +559,8 @@ func (t *T) M() {
 
 func main() {
 	var i I
-  describe(i) // (<nil>, <nil>)
-  // i.M()    // runtime error
+	describe(i) // (<nil>, <nil>)
+	// i.M()    // runtime error
 
 	var t *T
 	i = t
@@ -587,9 +584,9 @@ func main() {
 	var i interface{}
 	describe(i) // (<nil>, <nil>)
 	i = 42
-  describe(i) // (42, int)
+	describe(i) // (42, int)
 	i = "hello"
-  describe(i) // (hello, string)
+	describe(i) // (hello, string)
 }
 
 func describe(i interface{}) {
