@@ -912,7 +912,7 @@ func main() {
 }
 ```
 
-Note that all the goroutines will halt when the `main()` function returns. So for example, the following program will be likely to print nothing.
+Note that all the goroutines will halt when the `main()` function returns. (No `defer` statements will be run in this case if any.) So for example, the following program will be likely to print nothing.
 
 ```go
 func say(s string) {
