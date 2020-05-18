@@ -23,9 +23,9 @@ Go is syntactically similar to C, but with memory safety, garbage collection, st
 - Development: automatic documentation, built-in frameworks for testing and profiling, clear code separation, race condition detector, etc.
 - OOP without classes, inheritance, constructors, generics, and others
 
-## Go Basics
+This tutorial onwards is almost completely based on [A Tour of Go](https://tour.golang.org/list) and [How to Write Go Code](https://golang.org/doc/code.html).
 
-This tutorial onwards is almost completely based on [A Tour of Go](https://tour.golang.org/list).
+## Go Basics
 
 ### Packages and Functions
 
@@ -750,20 +750,6 @@ func main() {
 }
 ```
 
-[Package image](https://golang.org/pkg/image/#Image) defines the `Image` interface:
-
-```
-package image
-
-type Image interface {
-    ColorModel() color.Model
-    Bounds() Rectangle
-    At(x, y int) color.Color
-}
-```
-
-**Note**: the `Rectangle` return value of the `Bounds` method is actually an [`image.Rectangle`](https://golang.org/pkg/image/#Rectangle), as the declaration is inside package `image`. The `color.Color` and `color.Model` types are also interfaces. These interfaces and types are specified by the [image/color package](https://golang.org/pkg/image/color/). (See [the documentation](https://golang.org/pkg/image/#Image) for all the details.)
-
 ## Concurrency
 
 ### Goroutines and Channels
@@ -960,3 +946,147 @@ func main() {
 }
 ```
 
+## Code Development
+
+### Package Organization
+
+Go programs are organized into packages. A package is a collection of source files in the same directory that are compiled together. A module is a collection of related Go packages that are released together. A Go repository typically contains only one module, located at the root of the repository. A file named `go.mod` there declares the module path: the import path prefix for all packages within the module.
+
+Note that you don't need to publish your code to a remote repository before you can build it. A module can be defined locally without belonging to a repository. However, it's a good habit to organize your code as if you will publish it someday.
+
+To compile and run a simple program, first choose a module path (we'll use `example.com/user/hello`) and create a `go.mod` file that declares it:
+
+```shell
+$ mkdir hello
+$ cd hello
+$ go mod init example.com/user/hello
+go: creating new go.mod: module example.com/user/hello
+$ cat go.mod
+module example.com/user/hello
+
+go 1.14
+```
+
+In this directory, let's write a `morestrings` package and use it from a `hello` program. First, create a directory for the package named `hello/morestrings`, and then a file named `reverse.go` in that directory with the following contents:
+
+```go
+package morestrings
+
+// ReverseRunes returns its argument string reversed rune-wise left to right.
+func ReverseRunes(s string) string {
+	r := []rune(s)
+	for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 {
+		r[i], r[j] = r[j], r[i]
+	}
+	return string(r)
+}
+```
+
+Then we create a file in `hello` named `hello.go`.
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"example.com/user/hello/morestrings" // local package
+  "github.com/google/go-cmp/cmp"       // remote package
+)
+
+func main() {
+	fmt.Println(morestrings.ReverseRunes("!oG ,olleH"))
+  fmt.Println(cmp.Diff("Hello World", "Hello Go"))
+}
+```
+
+Then we can do either `go run`, `go build` or `go install` in the `hello` directory.
+
+- If we do `go run .`, or more specifically `go run hello.go`, the main package will be compiled and directly run on the compiled binary. The binary is not stored anywhere.
+- If we do `go build`/`go build .`, or more specifically `go build example.com/user/hello `, then an executable named `hello` will be built in the current directory, and one can run the binary by `./hello`.
+- If we do `go install`/`go install .`, or `go install example.com/user/hello`, then the executable will not appear in the current directory. Rather, it will be installed in `$HOME/go/bin/hello` and can be invoked directly via `hello`. The install directory is controlled by the `GOPATH` and `GOBIN` [environment variables](https://golang.org/cmd/go/#hdr-Environment_variables). 
+
+Import path can also involve remote repositories. When you run commands like `go install`, `go build`, or `go run`, the `go` command will automatically download the remote module and record its version in your `go.mod` file.
+
+```shell
+$ go build
+go: finding module for package github.com/google/go-cmp/cmp
+go: downloading github.com/google/go-cmp v0.4.1
+go: found github.com/google/go-cmp/cmp in github.com/google/go-cmp v0.4.1
+$ ./hello 
+Hello, Go!
+  string(
+- 	"Hello World",
++ 	"Hello Go",
+  )
+$ cat go.mod
+module example.com/user/hello
+
+go 1.14
+
+require github.com/google/go-cmp v0.4.1
+```
+
+### Testing and Benchmarking
+
+Go has a lightweight test framework composed of the `go test` command and the `testing` package.
+
+You write a test by creating a file with a name ending in `_test.go` that contains functions that take the form of `func TestXxx(*testing.T)`. The test framework runs each such function; if the function calls a failure function such as `t.Error` or `t.Fail`, the test is considered to have failed.
+
+Let's add a test to the `morestrings` package by creating the file `hello/morestrings/reverse_test.go` containing the following code.
+
+```go
+package morestrings
+
+import "testing"
+
+func TestReverseRunes(t *testing.T) {
+	cases := []struct {
+		in, want string
+	}{
+		{"Hello, world", "dlrow ,olleH"},
+		{"Hello, 世界", "界世 ,olleH"},
+		{"", ""},
+	}
+	for _, c := range cases {
+		got := ReverseRunes(c.in)
+		if got != c.want {
+			t.Errorf("ReverseRunes(%q) == %q, want %q", c.in, got, c.want)
+		}
+	}
+}
+```
+
+Then run the test with `go test` in the `hello/morestrings` directory:
+
+```shell
+$ pwd
+[...]/hello/morestrings
+$ go test
+PASS
+ok  	example.com/user/hello/morestrings	0.007s
+```
+
+Functions of the form `func BenchmarkXxx(*testing.B)` are considered benchmarks. By default, no benchmarks are run when the `go test` command is executed. It is only run when a -bench flag is provided. Benchmarks are run sequentially. For example, let's add a benchmark test in the `reverse_test.go` file.
+
+```go
+func BenchmarkReverseRunes(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		ReverseRunes("Hello, world")
+	}
+}
+```
+
+Then we run `go test -bench=.`. The -bench flag taken by the `go test` command accepts a regular expression, and only the benchmarks that match the expression will be run.
+
+The benchmark function must run the target code b.N times. During benchmark execution, b.N is adjusted until the benchmark function lasts long enough to be timed reliably. In the following example, the loop ran 5794428 times at a speed of 203 ns per loop. See more examples at [Package testing](https://golang.org/pkg/testing/).
+
+```shell
+$ go test -bench=.
+goos: darwin
+goarch: amd64
+pkg: example.com/user/hello/morestrings
+BenchmarkReverseRunes-4   	 5794428	       203 ns/op
+PASS
+ok  	example.com/user/hello/morestrings	2.377s
+```
