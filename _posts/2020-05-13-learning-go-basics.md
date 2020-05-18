@@ -766,11 +766,11 @@ type Image interface {
 
 ## Concurrency
 
+### Goroutines and Channels
+
 Goroutines: A *goroutine* is a lightweight thread managed by the Go runtime. Statement `go f(x, y, z)` starts a new goroutine running `f(x, y, z)`. The evaluation of `f`, `x`, `y`, and `z` happens in the current goroutine and the execution of `f` happens in the new goroutine.
 
 Goroutines run in the same address space, so access to shared memory must be synchronized. The [`sync`](https://golang.org/pkg/sync/) package provides useful primitives, although you won't need them much in Go as there are other primitives. For example, channels.
-
-### Channels
 
 Channels are a typed conduit through which you can send and receive values with the channel operator `<-`. The data flows in the direction of the arrow.
 
@@ -878,7 +878,7 @@ func main() {
 }
 ```
 
-### Mutexes
+### Package sync: Mutexes, WaitGroups
 
 We've seen how channels are great for communication among goroutines. But what if we don't need communication? What if we just want to make sure only one goroutine can access a variable at a time to avoid conflicts?
 
@@ -925,3 +925,38 @@ func main() {
 	fmt.Println(c.Value("somekey")) // 1000
 }
 ```
+
+Note that all the goroutines will halt when the `main()` function returns. So for example, the following program will be likely to print nothing.
+
+```go
+func say(s string) {
+	fmt.Println(s)
+}
+
+func main() {
+	for _, s := range []string{"hello", "world"} {
+		go say(s)
+	}
+}
+```
+
+One way to wait for all goroutines to finish is to use `sync.WaitGroup`. In this example, we launched several goroutines and incremented the WaitGroup counter for each. Each goroutine notifies the WaitGroup that it's done on return. `wg.Wait()` will block until the WaitGroup counter goes back to 0, i.e., when all the workers have notified they’re done. Note that a WaitGroup must be passed to functions by pointer.
+
+In theory, this can also be done using channels. Each goroutine sends a `done` signal to a channel on return, and the goroutine caller blocks to consume all the signals before it returns.
+
+```go
+func say(s string, wg *sync.WaitGroup) {
+	defer wg.Done()
+	fmt.Println(s)
+}
+
+func main() {
+	var wg sync.WaitGroup
+	for _, s := range []string{"hello", "world"} {
+		wg.Add(1)
+		go say(s, &wg)
+	}
+	wg.Wait()
+}
+```
+
