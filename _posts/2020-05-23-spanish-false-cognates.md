@@ -43,7 +43,7 @@ However, there are some *false cognates*, which look quite similar but actually 
 | | success | la salida (salir = to leave) |
 | \#11 | el suceso | success |
 | | event, incident | el éxito |
-| \#12 | la libreria | ibrary |
+| \#12 | la librería | ibrary |
 | | bookstore | la biblioteca |
 | \#13 | la noticia | notice |
 | | news | el cartel / el letrero |
