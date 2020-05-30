@@ -42,7 +42,7 @@ For example:
 - Kopi o kosong peng = iced coffee + no milk + no sugar
 - Kopi c = hot coffee + evaporated milk + sugar
 - Kopi c peng = iced coffee + evaporated milk + sugar
-- Kopi c kosong = iced coffee + evaporated milk + no sugar
+- Kopi c kosong = hot coffee + evaporated milk + no sugar
 - Kopi c siew dai = hot coffee + evaporated milk + less sugar
 
 Try these:
