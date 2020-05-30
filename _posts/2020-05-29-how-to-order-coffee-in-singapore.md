@@ -8,7 +8,7 @@ tags:
 - Languages
 ---
 
-Singapore is a country with great ethnic diversity, and thus their daily spoken language is a great mix of various language sources, including Chinese (Mandarin, Hokkien, Cantonese, ...), English, Malay, and many others. The way Singaporeans order coffee in a *kopi tiam* (coffee shop, 咖啡店) is therefore also very different from what you would see elsewhere.
+Singapore is a country with great ethnic diversity, and thus their daily spoken language is an organic mix of various languages, including Chinese (Mandarin, Hokkien, Cantonese, ...), English, Malay, and many others. The way Singaporeans order coffee in a *kopi tiam* (coffee shop, 咖啡店) is therefore also very different from what you would see elsewhere.
 
 *Kopi tiam* refers to the traditional coffee shop often found in Singapore, Indonesia, Malaysia, etc., and is different from Starbucks where you can simply name americano, cappuccino, or any other type of western coffee. To order a cup of desired beverage in a kopi tiam, you should consider:
 
@@ -29,8 +29,8 @@ Singapore is a country with great ethnic diversity, and thus their daily spoken 
   - ga dai = more sugar
 - [Optional] How thick would you like?
   - [default] = normal
-  - gau = thick
-  - po = thin
+  - gau = thicker
+  - po = thinner
 
 For example:
 
