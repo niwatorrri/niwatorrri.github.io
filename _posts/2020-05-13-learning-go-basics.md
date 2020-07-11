@@ -991,7 +991,7 @@ import (
 	"fmt"
 
 	"example.com/user/hello/morestrings" // local package
-  "github.com/google/go-cmp/cmp"       // remote package
+	"github.com/google/go-cmp/cmp"       // remote package
 )
 
 func main() {
