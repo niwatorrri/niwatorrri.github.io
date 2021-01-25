@@ -6,7 +6,6 @@ author: "Tori"
 mathjax: true
 header-style: text
 tags:
-- Mathematics
 - Computer Science
 ---
 
