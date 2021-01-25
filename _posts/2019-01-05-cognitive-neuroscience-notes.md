@@ -6,8 +6,7 @@ author: "Tori"
 header-style: text
 comments: true
 tags:
-- Neuroscience
-- Cognitive science
+- Psychology
 ---
 
 - TOC

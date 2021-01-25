@@ -5,7 +5,6 @@ author: "Tori"
 header-style: text
 comments: true
 tags: 
-- Computer Science
 - Machine Learning
 ---
 

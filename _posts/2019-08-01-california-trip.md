@@ -28,7 +28,7 @@ Since it's only me and my mom guiding ourselves for the trip, we've been pretty 
 
 Day 1: Santa Monica Beach -> Subset Blvd -> Hollywood
 
-- The beach is very popular and you can enjoy the sun, the sand, the sea, and everything! Just chill!
+- The beach is very popular and you can enjoy the sun, the sand, the sea, and everything! Just chill out!
 - Honestly, there's not much to say about Hollywood. It's more like a commercial place where you can simply hang around and that's it.
 
 Day 2: Universal Studios Theme Park -> Griffith Observatory
@@ -38,14 +38,14 @@ Day 2: Universal Studios Theme Park -> Griffith Observatory
 
 Day 3: Citadel Outlets -> Santa Barbara
 
-- My mom wants shopping so yeah. After that we headed north.
+- My mom wanted shopping so yeah. After that we headed north.
 
 
 
 **Day 4: Santa Barbara -> Solvang -> Pismo Beach -> San Luis Obispo**
 
 - Solvang is small town featuring its Danish-style architecture. Kind of dreamy walking around.
-- Pismo beach. Yes, beach again, and it's another feeling of the beach, and you'll never get bored of it.
+- Pismo beach. Yes, beach again, and it's another feeling of the beach, and you'll never get bored of beaches.
 - A lady helped us out at the gas station when we were having trouble paying for the gas fees. Didn't take down her name so I'm saying thank you here. Also we stayed at a very nice airbnb at San Luis Obispo, and the host is very friendly---also thank you for the nice place!
 
 
@@ -72,7 +72,7 @@ This is definitely the MOST fascinating part of the California State Route 1.
 **Day 7: San Francisco**
 
 - First of all, the roads in SF are insane... It's like 45 degrees uphill and then downhill. My mom was just too scared to drive and let me do all of it.
-- Fisherman’s Wharf has got really nice seafood! We had a huge crab and stuff and it was awesome! (For about 40 dollars IIRC)
+- Fisherman’s Wharf has got really nice seafood! We had a huge crab and stuff and it was awesome! (For about 40 dollars)
 - Golden Gate Bridge: you know, a must for travelers
 - Chinatown/Union Square: not much to say, we just drove through
-- Return our car and that's it. Bye! Looking forward to another tour!
+- Return our car and that's it. See you next time!

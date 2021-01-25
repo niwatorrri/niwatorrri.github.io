@@ -15,9 +15,9 @@ I'll elaborate my thoughts on the following aspects of the game Celeste if I hav
 
 2. How new mechanisms are introduced
 
-3. Level design
+3. Level design and embodied cognition
 
-4. How it encourages players: minimal death cost, collectibles
+4. How it encourages players: minimal death cost, collectibles, A/B/C sides, assist mode
 
 5. Plot: a gentle yet deep touch on depression
 

@@ -6,7 +6,7 @@ author: "Tori"
 mathjax: true
 header-style: text
 tags:
-- Mathematics
+- Logic
 ---
 
 **考完期末，第一篇想写的就是关于数理逻辑。**
