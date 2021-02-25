@@ -6,7 +6,7 @@ author: "Tori"
 header-style: text
 comments: true
 tags: 
-- Miscellaneous
+- Humanities
 ---
 
 **言论自由（Freedom of speech）**在当代的人类思想版图中是拥有相当优胜地位的一种观念。这种观念是如此的强大与不可或缺，以至于在当代的政治生活中，一旦试图公然否定这样的观念，权力的合法性将会难以自圆其说。

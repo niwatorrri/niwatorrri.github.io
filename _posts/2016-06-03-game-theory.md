@@ -6,7 +6,7 @@ author: "Tori"
 mathjax: true
 header-style: text
 tags:
-- Miscellaneous
+- Humanities
 ---
 
 这篇是博弈与社会课程的简略概要，数学部分几乎被省略到没有，领会下预习精神。
