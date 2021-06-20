@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "《观念辞典：你身边的政治学》笔记三：女权主义"
-subtitle: "'Everyday Politics' Part 3: Feminism"
+subtitle: "'Everyday Politics' Chapter 3: Feminism"
 author: "Tori"
 header-style: text
 comments: true
